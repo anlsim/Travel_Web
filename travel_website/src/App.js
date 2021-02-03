@@ -1,18 +1,30 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import USAMap from "react-usa-map";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+class App extends Component {
+  mapHandler = (event) => {
+    alert(event.target.dataset.name);
+  };
+ 
+  render() {
+    return (
+      <Router>
+        <div className="App">
+        <Route path="/" component={HomePage} exact/>
+        <USAMap onClick={this.mapHandler} />
         
-        <p>
-          Welcome to the travel website!
-        </p>
-       
-      </header>
-    </div>
-  );
+      </div>
+      </Router>
+      
+    );
+  }
+
 }
 
 export default App;
