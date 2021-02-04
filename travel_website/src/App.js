@@ -6,6 +6,10 @@ import {
 import HomePage from './pages/HomePage';
 import USAMap from "react-usa-map";
 import './App.css';
+import AboutPage from './pages/HomePage';
+import UpdatesList from './pages/UpdatesList';
+import UpdatePage from './pages/UpdatePage';
+
 
 class App extends Component {
   mapHandler = (event) => {
@@ -16,9 +20,13 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <div>
         <Route path="/" component={HomePage} exact/>
+        <Route path="/about" component={AboutPage} />
+        <Route path="/updates-list" component={UpdatesList} />
+        <Route path="/update" component={UpdatePage} />
         <USAMap onClick={this.mapHandler} />
-        
+        </div>
       </div>
       </Router>
       
