@@ -9,6 +9,7 @@ import './App.css';
 import AboutPage from './pages/HomePage';
 import UpdatesList from './pages/UpdatesList';
 import UpdatePage from './pages/UpdatePage';
+import NavBar from './NavBar';
 
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <NavBar />
           <div>
         <Route path="/" component={HomePage} exact/>
         <Route path="/about" component={AboutPage} />
