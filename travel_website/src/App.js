@@ -7,7 +7,7 @@ import HomePage from './pages/HomePage';
 import USAMap from "react-usa-map";
 import './App.css';
 import AboutPage from './pages/HomePage';
-import UpdatesList from './pages/UpdatesList';
+import UpdatesListPage from './pages/UpdatesListPage';
 import UpdatePage from './pages/UpdatePage';
 import NavBar from './NavBar';
 
@@ -27,7 +27,7 @@ class App extends Component {
           <div>
         <Route path="/" component={HomePage} exact/>
         <Route path="/about" component={AboutPage} />
-        <Route path="/updates-list" component={UpdatesList} />
+        <Route path="/updates-list" component={UpdatesListPage} />
         <Route path="/update/:stateName" component={UpdatePage} />
    
         </div>
