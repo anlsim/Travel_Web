@@ -13,9 +13,11 @@ import NavBar from './NavBar';
 
 
 class App extends Component {
-  mapHandler = (event) => {
-    alert(event.target.dataset.name);
-  };
+  //@TODO - Find a better way to display the map
+  // mapHandler = (event) => {
+  //   alert(event.target.dataset.name);
+       //<USAMap onClick={this.mapHandler} />
+  // };
  
   render() {
     return (
@@ -26,8 +28,8 @@ class App extends Component {
         <Route path="/" component={HomePage} exact/>
         <Route path="/about" component={AboutPage} />
         <Route path="/updates-list" component={UpdatesList} />
-        <Route path="/update" component={UpdatePage} />
-        <USAMap onClick={this.mapHandler} />
+        <Route path="/update/:stateName" component={UpdatePage} />
+   
         </div>
       </div>
       </Router>
