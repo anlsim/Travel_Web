@@ -1,35 +1,31 @@
 import React, {Component} from 'react';
 import {
   BrowserRouter as Router,
-  Route,
+  Route, Switch
 } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import USAMap from "react-usa-map";
 import './App.css';
 import AboutPage from './pages/HomePage';
 import UpdatesListPage from './pages/UpdatesListPage';
 import UpdatePage from './pages/UpdatePage';
 import NavBar from './NavBar';
-
+import NotFoundPage from './pages/NotFoundPage';
 
 class App extends Component {
-  //@TODO - Find a better way to display the map
-  // mapHandler = (event) => {
-  //   alert(event.target.dataset.name);
-       //<USAMap onClick={this.mapHandler} />
-  // };
- 
   render() {
     return (
       <Router>
         <div className="App">
           <NavBar />
           <div>
-        <Route path="/" component={HomePage} exact/>
-        <Route path="/about" component={AboutPage} />
-        <Route path="/updates-list" component={UpdatesListPage} />
-        <Route path="/update/:stateName" component={UpdatePage} />
-   
+            <Switch>
+                <Route path="/" component={HomePage} exact/>
+                <Route path="/about" component={AboutPage} />
+                <Route path="/updates-list" component={UpdatesListPage} />
+                <Route path="/update/:stateName" component={UpdatePage} />
+                <Route component={NotFoundPage} />
+            </Switch>
+        
         </div>
       </div>
       </Router>

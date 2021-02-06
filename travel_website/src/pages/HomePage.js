@@ -1,10 +1,11 @@
 import React from 'react';
-import USAMap from "react-usa-map";
+import Map from '../components/Map';
 
 const HomePage = () => (
     <React.Fragment>
 
     <h1>My Travel Page</h1>
+    <Map />
     </React.Fragment>
     
 
