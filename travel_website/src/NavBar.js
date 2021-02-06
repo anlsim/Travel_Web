@@ -1,19 +1,19 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar'
+
 
 const NavBar = () => (
-    <nav>
-        <ul>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-            <li>
-                <Link to="/about">About</Link>
-            </li>
-            <li>
-                <Link to="/updates-list">Updates</Link>
-            </li>
-        </ul>
-    </nav>
+<>
+<Navbar bg="light" variant="light">
+    <Navbar.Brand href="/">Navbar</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="/">Home</Nav.Link>
+      <Nav.Link href="/about">About</Nav.Link>
+      <Nav.Link href="/updates-list">Travel Updates</Nav.Link>
+    </Nav>
+  </Navbar>
+    </>
 );
 export default NavBar;

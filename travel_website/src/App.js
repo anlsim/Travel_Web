@@ -4,7 +4,8 @@ import {
   Route, Switch
 } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import './App.css';
 import AboutPage from './pages/HomePage';
 import UpdatesListPage from './pages/UpdatesListPage';
 import UpdatePage from './pages/UpdatePage';
