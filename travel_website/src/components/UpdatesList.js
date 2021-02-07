@@ -1,14 +1,28 @@
 import React from 'react';
 import {Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import CardDeck from 'react-bootstrap/CardDeck';
+import CardGroup from 'react-bootstrap/CardGroup';
+import CardColumns from 'react-bootstrap/CardColumns'
+
 const UpdatesList = ({updates}) => (
     <>
-    {updates.map((update, key )=>(
-        <Link key = {key} to = {`/update/${update.stateName}`}>
-            <h3>{update.title}</h3>  
-            <p>{update.content[0].substring(0, 150)}...</p>
+    <CardColumns>
+        
+            {updates.map((update, key )=>(
+                <Card>
+                <Card.Body>
+                 <Link key = {key} to = {`/update/${update.stateName}`}>
+                  <Card.Title>{update.title}</Card.Title>  
+                  <Card.Text>{update.content[0].substring(0, 150)}...</Card.Text>
         </Link>
+        </Card.Body>
+        </Card>   
       
     ))}
+           
+    </CardColumns>
+   
     </>
 );
 
