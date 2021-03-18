@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import CardDeck from 'react-bootstrap/CardDeck';
-import CardGroup from 'react-bootstrap/CardGroup';
 import CardColumns from 'react-bootstrap/CardColumns'
 
 const UpdatesList = ({updates}) => (

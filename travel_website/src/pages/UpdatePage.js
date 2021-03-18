@@ -1,6 +1,6 @@
 import React from 'react';
-import updateContent from './updateContent';
-import UpdatesList from '../components/UpdatesList';
+import updateContent from '../components/updateContent';
+import UpdatesList from '../components/UpdatesListPage';
 import NotFoundPage from './NotFoundPage';
 
 const UpdatePage = ({match}) => {

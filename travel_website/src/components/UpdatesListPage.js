@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UpdatesList from '../components/UpdatesList';
+import UpdatesList from './UpdatesList';
 import updateContent from './updateContent';
 
 const UpdatesListPage = () => (
