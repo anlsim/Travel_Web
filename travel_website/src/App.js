@@ -3,14 +3,14 @@ import {
   BrowserRouter as Router,
   Route, Switch
 } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage/HomePage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import './App.css';
-import AboutPage from './pages/HomePage';
+import AboutPage from './pages/HomePage/HomePage';
 import UpdatesListPage from './components/UpdatesListPage';
 import UpdatePage from './pages/UpdatePage';
-import NavBar from './components/NavBar';
-import NotFoundPage from './pages/NotFoundPage';
+import NavBar from './components/NavBar/NavBar';
+import NotFoundPage from './pages/Errors/NotFoundPage';
 import GalleryPage from './pages/GalleryPage/Gallery';
 
 class App extends Component {

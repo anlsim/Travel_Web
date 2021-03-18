@@ -1,7 +1,7 @@
 import React from 'react';
 import updateContent from '../components/updateContent';
 import UpdatesList from '../components/UpdatesListPage';
-import NotFoundPage from './NotFoundPage';
+import NotFoundPage from './Errors/NotFoundPage';
 
 const UpdatePage = ({match}) => {
     const stateName = match.params.stateName;
