@@ -7,10 +7,10 @@ import HomePage from './pages/HomePage/HomePage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import './App.css';
 import AboutPage from './pages/HomePage/HomePage';
-import UpdatesListPage from './components/UpdatesListPage';
-import UpdatePage from './pages/UpdatePage';
+import BlogPage from './pages/BlogPage/BlogPage';
+import UpdatePage from './components/UpdateEntry/UpdateEntry';
 import NavBar from './components/NavBar/NavBar';
-import NotFoundPage from './pages/Errors/NotFoundPage';
+import NotFoundPage from './pages/ErrorsPage/NotFoundPage';
 import GalleryPage from './pages/GalleryPage/Gallery';
 
 class App extends Component {
@@ -23,7 +23,7 @@ class App extends Component {
             <Switch>
                 <Route path="/" component={HomePage} exact/>
                 <Route path="/about" component={AboutPage} />
-                <Route path="/updates-list" component={UpdatesListPage} />
+                <Route path="/blog" component={BlogPage} />
                 <Route path="/gallery" component={GalleryPage} />
                 <Route path="/update/:stateName" component={UpdatePage} />
                 <Route component={NotFoundPage} />

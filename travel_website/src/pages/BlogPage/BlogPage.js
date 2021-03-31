@@ -1,7 +1,7 @@
 import React from 'react';
 
-import UpdatesList from './UpdatesList';
-import updateContent from './updateContent';
+import UpdatesList from '../../components/UpdatesList/UpdatesList';
+import updateContent from '../../components/Updates-content/Update-content';
 
 const UpdatesListPage = () => (
     <>

@@ -1,7 +1,7 @@
 import React from 'react';
-import updateContent from '../components/updateContent';
-import UpdatesList from '../components/UpdatesListPage';
-import NotFoundPage from './Errors/NotFoundPage';
+import updateContent from '../Updates-content/Update-content';
+import UpdatesList from '../../pages/BlogPage/BlogPage';
+import NotFoundPage from '../../pages/ErrorsPage/NotFoundPage';
 
 const UpdatePage = ({match}) => {
     const stateName = match.params.stateName;
@@ -16,7 +16,7 @@ const UpdatePage = ({match}) => {
         {update.content.map((paragraph, key)=>(
             <p key ={key}> {paragraph}</p>
         ))}
-        <h3>Other updates of our trips:</h3>
+        <h3>Other updates of our trip:</h3>
         <UpdatesList updates = {otherUpdates}/>
         </React.Fragment>
 
