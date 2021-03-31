@@ -6,15 +6,35 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const NavBar = () => (
 <>
-<Navbar bg="light" variant="light">
-    <Navbar.Brand href="/">TRAVEL BLOG</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="/blog">BLOG</Nav.Link>
-      <Nav.Link href="/gallery">GALLERY</Nav.Link>
-      <Nav.Link href="/map">MAP</Nav.Link>
-      <Nav.Link href="/about">ABOUT</Nav.Link>
-    </Nav>
-  </Navbar>
+
+
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <div className="container-fluid">
+  <Link className="navbar-brand" to="/">TRAVEL BLOG</Link>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
+
+        <li className="nav-item">
+            <Link className="nav-link" to="/blog">BLOG</Link>
+        </li>
+        <li className="nav-item">
+            <Link className="nav-link" to="/gallery">GALLERY</Link>
+        </li>
+        <li className="nav-item">
+            <Link className="nav-link" to="/map">MAP</Link>
+        </li>
+       
+        <li className="nav-item">
+            <Link className="nav-link" to="/about">ABOUT</Link>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
     </>
 );
 export default NavBar;
