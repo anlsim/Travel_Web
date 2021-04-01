@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
+import './App.scss';
 import {
   BrowserRouter as Router,
   Route, Switch
 } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
-import 'bootstrap/dist/css/bootstrap.min.css';
-//import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import AboutPage from './pages/AboutPage/AboutPage';
 import BlogPage from './pages/BlogPage/BlogPage';
 import UpdatePage from './components/UpdateEntry/UpdateEntry';
