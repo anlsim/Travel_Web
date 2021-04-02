@@ -3,9 +3,8 @@ import Hero from '../../components/Hero/Hero';
 
 const GalleryPage = () =>(
     <>
-    <Hero/>
+    <Hero title={'Gallery'}/>
     <div>
-        <h1>This will be the Gallery</h1>
     </div>
     </>
 );

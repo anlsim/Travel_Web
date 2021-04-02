@@ -1,12 +1,12 @@
 import React from 'react';
 import Map from '../../components/Map/Map';
+import Hero from '../../components/Hero/Hero';
 
 const HomePage = () => (
-    <React.Fragment>
-
-    <h1>My Travel Page</h1>
+    <>
+    {/* <Hero title={'Welcome to our blog!'}/>    */}
     <Map />
-    </React.Fragment>
+    </>
     
 
 );

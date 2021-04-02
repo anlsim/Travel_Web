@@ -1,10 +1,10 @@
 import React from 'react';
+import Hero from '../../components/Hero/Hero';
 
 const AboutPage = () => (
-    <React.Fragment>
-
-    <h1>About this website</h1>
-    </React.Fragment>
+    <>
+    <Hero title={'About Us'}/>
+    </>
 
 );
 

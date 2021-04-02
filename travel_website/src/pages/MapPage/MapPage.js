@@ -1,9 +1,10 @@
 import React from 'react';
 import Map from '../../components/Map/Map';
+import Hero from '../../components/Hero/Hero';
 
 const MapPage = () =>(
     <div>
-        <h1>MAP</h1>    
+        <Hero title={'Map'}/>   
         <Map/>
     </div>
 );

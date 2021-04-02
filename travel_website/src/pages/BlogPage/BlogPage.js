@@ -2,11 +2,11 @@ import React from 'react';
 
 import UpdatesList from '../../components/UpdatesList/UpdatesList';
 import updateContent from '../../components/Updates-content/Update-content';
+import Hero from '../../components/Hero/Hero';
 
 const UpdatesListPage = () => (
     <>
-
-    <h1>Trip Updates</h1>
+     <Hero title={'Blog'}/>
     <UpdatesList updates = {updateContent}/>
     </>
 
