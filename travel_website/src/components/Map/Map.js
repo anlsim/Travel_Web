@@ -16,12 +16,15 @@ class Map extends Component {
   };
 
   statesCustomConfig = {
-    NJ: {
-      fill: "navy",
+    TX: {
+      fill: "#9DD9D2",
      
     },
     NY: {
-      fill: "#CC0000",
+      fill: "#9DD9D2",
+    },
+    CO: {
+      fill: "#9DD9D2",
     },
   }
   

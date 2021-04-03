@@ -1,11 +1,15 @@
 import React from 'react';
 import Map from '../../components/Map/Map';
-import Hero from '../../components/Hero/Hero';
+import UpdatesList from '../../components/UpdatesList/UpdatesList';
+import updateContent from '../../components/Updates-content/Update-content';
 
 const HomePage = () => (
     <>
-    {/* <Hero title={'Welcome to our blog!'}/>    */}
-    <Map />
+    <div className='row'>
+        <div className='col-8'> <Map /> </div>
+        <div className='col-4'> <UpdatesList updates = {updateContent}/></div>
+    </div>
+   
     </>
     
 

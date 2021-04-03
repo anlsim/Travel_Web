@@ -9,7 +9,7 @@ const UpdatePage = ({match}) => {
     if(!update) return <NotFoundPage />
     const otherUpdates = updateContent.filter(update => update.stateName !== stateName);
     return(
-        <React.Fragment>
+        <>
 
         <h1>{update.stateName}</h1>
         <h2>{update.title} </h2>
@@ -18,7 +18,7 @@ const UpdatePage = ({match}) => {
         ))}
         <h3>Other updates of our trip:</h3>
         <UpdatesList updates = {otherUpdates}/>
-        </React.Fragment>
+        </>
 
     );
 }
