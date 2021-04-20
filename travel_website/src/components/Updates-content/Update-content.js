@@ -2,13 +2,13 @@ const updates = [
     {   
         id: 1,
         stateName: 'CO',
-        title: 'The First Week ',
+        title: 'The First Week',
         content: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil est enim, de quo minus dubitari possit, quam et honesta expetenda per se et eodem modo turpia per se esse fugienda. Ita, quem ad modum in senatu semper est aliquis, qui interpretem postulet, sic, isti nobis cum interprete audiendi sunt. Tanta vis admonitionis inest in locis; Duo Reges: constructio interrete. Indicant pueri, in quibus ut in speculis natura cernitur. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Urgent tamen et nihil remittunt.`]
     },
     {
         id: 2,
-        stateName: 'CO',
-        title: 'Second ',
+        stateName: 'WA',
+        title: 'Second Week',
         content: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil est enim, de quo minus dubitari possit, quam et honesta expetenda per se et eodem modo turpia per se esse fugienda. Ita, quem ad modum in senatu semper est aliquis, qui interpretem postulet, sic, isti nobis cum interprete audiendi sunt. Tanta vis admonitionis inest in locis; Duo Reges: constructio interrete. Indicant pueri, in quibus ut in speculis natura cernitur. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Urgent tamen et nihil remittunt.`]
     },
     {
