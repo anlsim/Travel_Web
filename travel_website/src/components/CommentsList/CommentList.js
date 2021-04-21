@@ -12,4 +12,4 @@ const CommentsList = ({ comments}) => (
     </>
 )
 
-export default CommentsList();
+export default CommentsList;
