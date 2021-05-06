@@ -8,7 +8,7 @@ const UpdatesList = ({updates}) => (
         {updates.map((update, key )=>(
             <div className="card" >
                 <div className="card-body">
-                <Link key = {key} to = {`/update/${update.stateName}`}>
+                <Link key = {key} to = {`/updates/${update.ObjectId}`}>
                   <h3 className="card-title">{update.title}</h3>  
                 </Link>
                 </div>

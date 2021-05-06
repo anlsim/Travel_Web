@@ -5,28 +5,31 @@ import NotFoundPage from '../../pages/ErrorsPage/NotFoundPage';
 import CommentList from '../CommentsList/CommentList';
 
 const UpdatePage = ({match}) => {
-    const stateName = match.params.stateName;
-    const update = updateContent.find(update => update.stateName === stateName);
-    const [updateInfo, setArticleInfo] = useState({likes: 0, comments: []});
-    useEffect(()=>{
+    //const updateName = match.params.name;
+    const updateId = match.params.ObjectId;
+    console.log(updateId)
+     //const update = updateContent.find(update => update.id === updateId);
+    const [updateInfo, setUpdateInfo] = useState({likes: 0, comments: []});
+    useEffect(()=> {
         const fetchData = async() => {
-            const result = await fetch(`/api/articles/${update}`);
+            console.log(updateId)
+            const result = await fetch(`/api/updates/${updateId}`);
             const body = await result.json();
             console.log(body);
-            setArticleInfo(body);
+            setUpdateInfo(body);
         }
         fetchData();
-        setArticleInfo({likes: 3}, [update]);
-    });
-    if(!update) return <NotFoundPage />
-    const otherUpdates = updateContent.filter(update => update.stateName !== stateName);
+    }, [updateId]);
+        //setUpdateInfo({likes: 10}, [update]);
+    //});
+    if(!updateId) return <NotFoundPage />
+    const otherUpdates = updateContent.filter(update => update.ObjectId !== updateId);
     return(
         <>
 
-        <h1>{update.stateName}</h1>
-        <h2>{update.title} </h2>
-        <p>This Post has been like {updateInfo.likes} times</p>
-        {update.content.map((paragraph, key)=>(
+        <h1>{updateId.title} </h1>
+        <p>This Post has been liked {updateInfo.likes} times</p>
+        {updateId.content.map((paragraph, key)=>(
             <p key ={key}> {paragraph}</p>
         ))}
        <hr />
