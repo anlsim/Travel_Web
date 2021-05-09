@@ -11,7 +11,7 @@ class Map extends Component {
 
     
    
-    window.location.href = '/update/' + (stateName);
+    window.location.href = '/state/' + (stateName);
 
   };
 
@@ -30,7 +30,7 @@ class Map extends Component {
   
   render() {
     return (
-      <div className="App">
+      <div className="Apps">
         <USAMap customize={this.statesCustomConfig} onClick={this.mapHandler} />
 
       </div>

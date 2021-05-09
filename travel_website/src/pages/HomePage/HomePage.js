@@ -1,14 +1,14 @@
 import React from 'react';
 import Map from '../../components/Map/Map';
-import UpdatesList from '../../components/UpdatesList/UpdatesList';
-import updateContent from '../../components/Updates-content/Update-content';
+import PostList from '../../components/PostList/PostList'
+import PostData from '../../components/PostList/PostData';
 import CounterBar from '../../components/CounterBar/CounterBar';
 
 const HomePage = () => (
     <>
     <div className='row'>
         <div className='col-8'> <Map /> </div>
-        <div className='col-4'> <UpdatesList updates = {updateContent}/></div>
+        <div className='col-4'> <PostList updates = {PostData}/></div>
         <CounterBar />
     </div>
    
