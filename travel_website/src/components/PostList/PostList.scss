@@ -1,11 +1,22 @@
-.grid {
-    display: grid;
-    grid-template-rows: 100px 300px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    
-  }
+@import '../../styles/colors.scss';
+img {
+  opacity: 0.6;
+}
 
-  .item {
-    min-height: 200px;
-    background-color: #eee;
-  }
+.card-title{
+  color: $Dark-purple;
+}
+.text-muted{
+  color: $Dark-purple;
+}
+.card{
+  color: $Dark-purple;
+  max-width: 400px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+.bottom{
+  position: absolute;
+  bottom: 0;
+}
