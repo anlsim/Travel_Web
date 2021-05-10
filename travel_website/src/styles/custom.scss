@@ -1,0 +1,13 @@
+@import 'colors';
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+$dark:          $Dark-purple !default;
+$primary:       $Blue-green !default;
+$secondary:     $Yellow-crayola !default;
+$light:         $Floral-white !default;
+
+
+$navbar-light-hover-color: $Dark-Orange !default;
+$navbar-light-active-color: $Dark-Orange !default !default;
