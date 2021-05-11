@@ -10,6 +10,7 @@ const BlogPage = () => (
     <>
     <Hero title = {'Blog'}/>
     <SideMenu />
+
     <PostList updates = {PostData}/>
     </>
 

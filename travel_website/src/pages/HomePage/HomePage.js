@@ -3,14 +3,21 @@ import Map from '../../components/Map/Map';
 import PostList from '../../components/PostList/PostList'
 import PostData from '../../components/PostList/PostData';
 import CounterBar from '../../components/CounterBar/CounterBar';
+import './HomePage.scss';
+
 
 const HomePage = () => (
     <>
-    <div className='row'>
-        <div className='col-8'> <Map /> </div>
-        <div className='col-4'> <PostList updates = {PostData}/></div>
+    <div className="homeDiv">
+        <div className='row rowHome'>
+            <div className='col'> <Map /> </div>
+            <div className='col'> <PostList updates = {PostData.slice(0,6)}/></div>
+        </div>
+        <div className='counterBar'>
         <CounterBar />
+        </div>
     </div>
+   
    
     </>
     
