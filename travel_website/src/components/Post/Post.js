@@ -6,20 +6,29 @@ import NotFoundPage from "../../pages/ErrorsPage/NotFoundPage"
 
 const Post = ({ match }) => {
     const date = match.params.date;
-    const article = PostData.find(article => article.date === date);
+    const update = PostData.find(update => update.date === date);
 
-    if (!article) return <NotFoundPage />
+    if (!update) return <NotFoundPage />
 
-    const otherArticles = PostData.filter(article => article.date !== date);
+    const otherUpdates = PostData.filter(update => update.date !== date);
 
     return (
         <>
-        <h1>{article.title}</h1>
-        {article.content.map((paragraph, key) => (
-            <p key={key}>{paragraph}</p>
-        ))}
-        <h3>Other Articles:</h3>
-        <PostList updates = {otherArticles} />
+        <div className="row postContainer">
+        <div className="col">
+            <h1>{update.title}</h1>
+            {update.content.map((paragraph, key) => (
+                <p key={key}>{paragraph}</p>
+            ))}
+        </div>
+        
+        <div className="col updateList">
+            <h3>Other Updates:</h3>
+            <PostList updates = {otherUpdates.slice(0,6)} />
+        </div>
+        
+        </div>
+        
         </>
     );
 }
