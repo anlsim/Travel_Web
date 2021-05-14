@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
-import './App.scss';
 import {
   Route, Switch
 } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
-import "bootstrap/dist/css/bootstrap.min.css";
 import AboutPage from './pages/AboutPage/AboutPage';
 import BlogPage from './pages/BlogPage/BlogPage';
 import Post from './components/Post/Post'

@@ -5,6 +5,7 @@ import "./NavBar.scss";
 
 const NavBar = () => (
 <>
+<div className="daNAv">
 <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
     <Link className="navbar-brand" to="/">TRAVEL BLOG</Link>
@@ -30,6 +31,7 @@ const NavBar = () => (
     </div>
   </div>
 </nav>
+</div>
 </>
 
 
