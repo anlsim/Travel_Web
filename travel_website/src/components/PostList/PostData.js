@@ -5,6 +5,13 @@ const PostData = [
         stateName: 'CO',
         title: 'The First in List Lorem ipsum dolor sit amet',
         imgUrl: 'https://picsum.photos/200',
+        postImage: [
+            
+                'https://picsum.photos/200/300',
+                'https://picsum.photos/300/300',
+                'https://picsum.photos/300',
+            
+        ],
         content: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil est enim, de quo minus dubitari possit, quam et honesta expetenda per se et eodem modo turpia per se esse fugienda. Ita, quem ad modum in senatu semper est aliquis, qui interpretem postulet, sic, isti nobis cum interprete audiendi sunt. Tanta vis admonitionis inest in locis; Duo Reges: constructio interrete. Indicant pueri, in quibus ut in speculis natura cernitur. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Urgent tamen et nihil remittunt.`]
     },
     {
@@ -12,7 +19,7 @@ const PostData = [
         date: '05202021',
         stateName: 'WA',
         title: 'Second Week',
-        imgUrl: 'https://picsum.photos/200',
+        imgUrl: 'https://picsum.photos/300',
         content: [`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil est enim, de quo minus dubitari possit, quam et honesta expetenda per se et eodem modo turpia per se esse fugienda. Ita, quem ad modum in senatu semper est aliquis, qui interpretem postulet, sic, isti nobis cum interprete audiendi sunt. Tanta vis admonitionis inest in locis; Duo Reges: constructio interrete. Indicant pueri, in quibus ut in speculis natura cernitur. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Urgent tamen et nihil remittunt.`]
     },
     {

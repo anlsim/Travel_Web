@@ -1,11 +1,12 @@
 @import "../../styles/colors.scss";
 
 h1{
+    margin-left: 0;
     color: $Dark-purple;
 }
 .postContainer{
     margin: 50px 15px 15px 50px;
-    
+    text-align: left;
 }
 .updateList{
     max-width: 500px;

@@ -8,8 +8,8 @@ export default function CounterBar() {
        const [daysCounter, setDaysCounter] = useState(10);
        return(     
        <div className="Bar">
-              <h1>Cities Visited: {citiesCounter}</h1>
-              <h1>Days on the road: {daysCounter}</h1>
+              <h1 id="titleBar">Cities Visited: {citiesCounter}</h1>
+              <h1 id="titleBar">Days on the road: {daysCounter}</h1>
        
        </div>
         
