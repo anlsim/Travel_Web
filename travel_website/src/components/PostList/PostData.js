@@ -72,14 +72,14 @@ const PostData = [
     {
         date: '07182021',
         stateName: 'NY',
-        title: ' 4 Crazy weather',
+        title: ' cositas',
         imgUrl: 'https://picsum.photos/200',
         content: [`Quamquam non negatis nos intellegere quid sit voluptas, sed quid ille dicat. Itaque e contrario moderati aequabilesque habitus, affectiones ususque corporis apti esse ad naturam videntur. Nec enim figura corporis nec ratio excellens ingenii humani significat ad unam hanc rem natum hominem, ut frueretur voluptatibus. Claudii libidini, qui tum erat summo ne imperio, dederetur. At tu eadem ista dic in iudicio aut, si coronam times, dic in senatu. Itaque homo in primis ingenuus et gravis, dignus illa familiaritate Scipionis et Laelii, Panaetius, cum ad Q. Laboro autem non sine causa; Invidiosum nomen est, infame, suspectum.`]
     }, 
     {
         date: '01182020',
         stateName: 'NY',
-        title: '5 Best Week',
+        title: 'uno dos tres',
         imgUrl: 'https://picsum.photos/200',
         content: [`Quamquam non negatis nos intellegere quid sit voluptas, sed quid ille dicat. Itaque e contrario moderati aequabilesque habitus, affectiones ususque corporis apti esse ad naturam videntur. Nec enim figura corporis nec ratio excellens ingenii humani significat ad unam hanc rem natum hominem, ut frueretur voluptatibus. Claudii libidini, qui tum erat summo ne imperio, dederetur. At tu eadem ista dic in iudicio aut, si coronam times, dic in senatu. Itaque homo in primis ingenuus et gravis, dignus illa familiaritate Scipionis et Laelii, Panaetius, cum ad Q. Laboro autem non sine causa; Invidiosum nomen est, infame, suspectum.`]
     }, 
@@ -93,7 +93,7 @@ const PostData = [
     {
         date: '08082021',
         stateName: 'NY',
-        title: 'I am the LAST in the List LAST in the List',
+        title: 'LAST ',
         imgUrl: 'https://picsum.photos/200',
         content: [`Quamquam non negatis nos intellegere quid sit voluptas, sed quid ille dicat. Itaque e contrario moderati aequabilesque habitus, affectiones ususque corporis apti esse ad naturam videntur. Nec enim figura corporis nec ratio excellens ingenii humani significat ad unam hanc rem natum hominem, ut frueretur voluptatibus. Claudii libidini, qui tum erat summo ne imperio, dederetur. At tu eadem ista dic in iudicio aut, si coronam times, dic in senatu. Itaque homo in primis ingenuus et gravis, dignus illa familiaritate Scipionis et Laelii, Panaetius, cum ad Q. Laboro autem non sine causa; Invidiosum nomen est, infame, suspectum.`]
     }, 

@@ -9,7 +9,8 @@ import Post from './components/Post/Post'
 import NavBar from './components/NavBar/NavBar';
 import NotFoundPage from './pages/ErrorsPage/NotFoundPage';
 import GalleryPage from './pages/GalleryPage/Gallery';
-import MapPage from './pages/MapPage/MapPage'
+import MapPage from './pages/MapPage/MapPage';
+import State from './components/State/State'
 
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
                 <Route path="/blog" component={BlogPage} />
                 <Route path="/gallery" component={GalleryPage} />
                 <Route path="/post/:date" component={Post} />
+                <Route path="/state/:state" component={State} />
                 <Route path="/map" component={MapPage} />
                 <Route component={NotFoundPage} />
             </Switch>
