@@ -10,8 +10,8 @@ const HomePage = () => (
     <>
     <div className="homeDiv">
         <div className='row rowHome'>
-            <div className='col'> <Map /> </div>
-            <div className='col'> <PostList updates = {PostData.slice(0,6)}/></div>
+            <div className='col-9'> <Map /> </div>
+            <div className='col'> <PostList className='updates' updates = {PostData.slice(0,4)}/></div>
         </div>
         <div className='counterBar'>
         <CounterBar />
