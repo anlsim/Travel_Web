@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {
   Route, Switch
 } from 'react-router-dom';
+//import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './pages/HomePage/HomePage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import BlogPage from './pages/BlogPage/BlogPage';

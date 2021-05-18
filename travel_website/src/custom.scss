@@ -11,7 +11,7 @@ $light:         white !default;
 
 $navbar-light-hover-color: $Dark-Orange !default;
 $navbar-light-active-color: $Dark-Orange !default !default;
-$navbar-light-brand-color:                $Dark-purple !default;
+$navbar-light-brand-color:  $Dark-purple !default;
 
 
-@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap/scss/bootstrap";
