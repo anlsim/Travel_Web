@@ -15,23 +15,23 @@ const Post = ({ match }) => {
     return (
         <>
         <div className="row postContainer">
-        <div className="col-8">
-            <h1>{update.title}</h1>
-            {update.content.map((paragraph, key) => (
-                <p key={key}>{paragraph}</p>
-            ))}
-            {
-                update.postImage.map((img, key )=>(
-                    <img src={img} alt={key}></img>
-                ))
-            }
-        </div>
-        
-        <div className="col updateList">
-            <h3>Other Updates:</h3>
-            <PostList updates = {otherUpdates.slice(0,4)} />
-        </div>
-        
+            <div className="col-8 postDiv">
+                <h1>{update.title}</h1>
+                {update.content.map((paragraph, key) => (
+                    <p key={key}>{paragraph}</p>
+                ))}
+                {
+                    update.postImage.map((img, key) => (
+                        <img src={img} alt={key}></img>
+                    ))
+                }
+            </div>
+            
+            <div className="col updateList">
+                <h3>Other Updates:</h3>
+                <PostList updates = {otherUpdates.slice(0,4)} />
+            </div>
+            
         </div>
         
         </>
