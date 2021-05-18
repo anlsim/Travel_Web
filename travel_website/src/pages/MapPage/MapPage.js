@@ -1,5 +1,5 @@
 import React from 'react';
-import MapComponent from '../../components/Map/Map';
+import Map from '../../components/Map/Map';
 import Hero from '../../components/Hero/Hero';
 import "./MapPage.scss";
 import CounterBar from '../../components/CounterBar/CounterBar'
@@ -7,7 +7,7 @@ const MapPage = () =>(
     <div>
         <Hero title={'Map'}/>
         <div className="mapDiv">
-            <MapComponent />
+            <Map />
         </div>   
         
         <CounterBar/>

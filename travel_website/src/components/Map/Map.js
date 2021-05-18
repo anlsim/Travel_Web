@@ -4,19 +4,19 @@ import PostData from "../PostList/PostData";
 import { MapContainer, TileLayer, Marker, Popup, Circle, CircleMarker, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import'./Map.scss';
-import {locations} from './locations';
-import L from "leaflet";
+
 
 
 
 
 
 const updates = PostData.filter(updates => updates['stateName']);
+const coordinates = PostData.map(a => a.location);
+console.log(coordinates);
 const position = [38.958988, -77.417320];
-const fillBlueOptions = { fillColor: 'red' }
-const blackOptions = { color: 'black'  }
+
 const limeOptions = { color: 'blue', weight: 5 }
-const purpleOptions = { color: 'purple' }
+
 const redOptions = { color: 'red', weight: 10 }
 
 
@@ -37,12 +37,7 @@ class Map extends Component {
   
   // mapHandler = (event) => {
   //   let stateName = event.target.dataset.name;
-
-    
-
-   
   //   window.location.href = '/state/' + (stateName);
-
   // };
  
   // statesCustomConfig = {
@@ -60,8 +55,6 @@ class Map extends Component {
   // }
   
   render() {
-
-  
     const mapSettings = {
       center: CENTER,
       defaultBaseMap: 'OpenStreetMap',
@@ -71,22 +64,20 @@ class Map extends Component {
     return (
   //     <div className="Apps">
   //       <USAMap customize={this.statesCustomConfig} onClick={this.mapHandler} />
-
   //     </div>
   <div id="mapId">
-
-
   <MapContainer {...mapSettings}> 
   <TileLayer
     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   />
   <Marker position={position}>
-  <Polyline pathOptions={limeOptions} positions={polyline} />
-    <Circle center={[38.958988, -77.417320]} pathOptions={redOptions} radius={200} />
-    <Circle center={[36.627517, -83.621635]} pathOptions={redOptions} radius={200} />
-    <Circle center={[45.494716, -115.464968]} pathOptions={redOptions} radius={200} />
-    <Circle center={[47.283049, -120.760049]} pathOptions={redOptions} radius={200} />
+  <Polyline pathOptions={limeOptions} positions={coordinates} />
+    {
+      coordinates.map((location, id)=>(
+        <Circle key = {id} center={location} pathOptions={redOptions} radius={200} />))
+    }
+    
   </Marker>
 </MapContainer> 
 </div>
