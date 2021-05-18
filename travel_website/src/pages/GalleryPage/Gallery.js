@@ -5,8 +5,8 @@ import GalleryGrid from 'react-grid-gallery';
 import './Gallery.scss';
 const images =[
     { 
-        src: "https://picsum.photos/200/300",
-        thumbnail: "https://picsum.photos/200/300",
+        src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
+        thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
         margin: "15",
     },
     { 
@@ -17,29 +17,29 @@ const images =[
             caption: "Red Zone - Paris (Tom Eversley - isorepublic.com)"
     },
     { 
-        src:"https://picsum.photos/400/300",
-        thumbnail: "https://picsum.photos/400/300",
+        src:"https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
         
     },
     { 
-        src: "https://picsum.photos/200/300",
-        thumbnail: "https://picsum.photos/200/300",
+        src: "https://c4.staticflickr.com/9/8578/28357117603_97a8233cf5_b.jpg",
+        thumbnail: "https://c4.staticflickr.com/9/8578/28357117603_97a8233cf5_b.jpg",
     },
     { 
         src:"https://picsum.photos/400/300",
         thumbnail: "https://picsum.photos/400/300",
     },
     { 
-        src:"https://picsum.photos/400/300",
-        thumbnail: "https://picsum.photos/400/300",
+        src:"https://c1.staticflickr.com/9/8056/28354485944_148d6a5fc1_b.jpg",
+        thumbnail: "https://c1.staticflickr.com/9/8056/28354485944_148d6a5fc1_b.jpg",
     },
     { 
-        src: "https://picsum.photos/200/300",
-        thumbnail: "https://picsum.photos/200/300",
+        src: "https://c7.staticflickr.com/9/8824/28868764222_19f3b30773_b.jpg",
+        thumbnail: "https://c7.staticflickr.com/9/8824/28868764222_19f3b30773_b.jpg",
     },
     { 
-        src:"https://picsum.photos/400/300",
-        thumbnail: "https://picsum.photos/400/300",
+        src:"https://c1.staticflickr.com/9/8707/28868704912_cba5c6600e_b.jpg",
+        thumbnail: "https://c1.staticflickr.com/9/8707/28868704912_cba5c6600e_b.jpg",
     },
     { 
         src:"https://picsum.photos/200/400",

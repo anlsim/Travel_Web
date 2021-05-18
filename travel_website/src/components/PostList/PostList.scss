@@ -1,23 +1,23 @@
 @import '../../styles/colors.scss';
-img {
-  opacity: 0.6;
-}
-.card{
-  color: $Dark-purple;
-  overflow: hidden;
-  // position: relative;
-  // max-width: 500px;
-  // max-height: 300px;
-}
-.card-title{
-  color: $Dark-purple;
 
-}
-.text-muted{
-  color: $Dark-purple;
-}
-
-.bottom{
-  position: absolute;
-  bottom: 0;
+.card-columns{
+  img {
+    opacity: 0.7;
+  }
+  .card{
+    color: $Dark-purple;
+    overflow: hidden;
+  }
+  .card-title{
+    color: $Dark-purple;
+  
+  }
+  .text-muted{
+    color: $Dark-purple;
+  }
+  
+  .bottom{
+    position: absolute;
+    bottom: 0;
+  }
 }
