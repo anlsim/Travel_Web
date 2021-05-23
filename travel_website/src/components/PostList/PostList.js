@@ -12,7 +12,7 @@ const PostList = ({updates}) => (
                 <div className="card-img-overlay">
                 <Link key = {id} to = {`/post/${update.date}`}>
                     <div className="bottom">
-                    <p className="card-text"><small>Last updated 3 mins ago</small></p> 
+                    <p className="card-text"><small>{update.date}</small></p> 
                     <h3 className="card-title">{update.title}</h3>
                     </div>
                    

@@ -2,6 +2,7 @@ const PostData = [
     {
         date: '05202021',
         stateName: 'WA',
+        cityName: 'Spokane',
         city: 'Spokane',
         title: 'Second Week',
         imgUrl: 'https://picsum.photos/300',
@@ -16,6 +17,7 @@ const PostData = [
     {
         date: '11182020',
         stateName: 'SD',
+        cityName: 'Rapid City',
         city: 'Rapid City',
         title: '5 Best Week',
         imgUrl: 'https://picsum.photos/500',
@@ -30,6 +32,7 @@ const PostData = [
     {
         date: '04212021',
         stateName: 'VT',
+        cityName: 'Vermonchi',
         title: 'Third in List',
         imgUrl: 'https://c8.staticflickr.com/9/8104/28973555735_ae7c208970_b.jpg',
         postImage: [

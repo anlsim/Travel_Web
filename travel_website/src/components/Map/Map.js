@@ -4,10 +4,11 @@ import PostData from "../PostList/PostData";
 import { MapContainer, TileLayer, Marker, Popup, Circle, CircleMarker, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import'./Map.scss';
+import { popup } from 'leaflet';
 
 
-const updates = PostData.filter(updates => updates['stateName']);
-const coordinates = PostData.map(a => a.location);
+
+const coordinates = PostData.map(obj => obj.location);
 
 const lineColor = { color: '#FF8811', weight: 5 }
 const circleColor = { color: '#221C35', weight: 10 }
@@ -22,25 +23,12 @@ const CENTER = [LOCATION.lat, LOCATION.lng];
 const DEFAULT_ZOOM = 4.5;
 
 class Map extends Component {
-  
+
   // mapHandler = (event) => {
-  //   let stateName = event.target.dataset.name;
+  //   let stateName = coordinates;
   //   window.location.href = '/state/' + (stateName);
   // };
- 
-  // statesCustomConfig = {
-    
-  //   TX: {
-  //     fill: "#9DD9D2",
-     
-  //   },
-  //   NY: {
-  //     fill: "#9DD9D2",
-  //   },
-  //   CO: {
-  //     fill: "#9DD9D2",
-  //   },
-  // }
+  coordinates
   
   render() {
     const mapSettings = {
@@ -48,13 +36,14 @@ class Map extends Component {
       defaultBaseMap: 'OpenStreetMap',
       zoom: DEFAULT_ZOOM,
     };
-  
+    
+
     return (
   //     <div className="Apps">
   //       <USAMap customize={this.statesCustomConfig} onClick={this.mapHandler} />
   //     </div>
   <div id="mapId">
-  <MapContainer {...mapSettings}> 
+  <MapContainer {...mapSettings} > 
     <TileLayer
       attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -63,8 +52,16 @@ class Map extends Component {
       {
         coordinates.map((location, id)=>(
           
-          <Circle key = {id} center={location} pathOptions={circleColor} radius={100} />
-        ))
+          <Circle key = {id} center={location} pathOptions={circleColor} radius={100}>
+         
+         <Popup>
+          {location}
+          </Popup>
+            
+          </Circle>
+    
+        )
+        )
           
       }
   </MapContainer> 

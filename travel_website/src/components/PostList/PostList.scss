@@ -2,7 +2,7 @@
 
 .card-columns{
   img {
-    opacity: 0.7;
+    opacity: 0.6;
   }
   .card{
     color: $Dark-purple;
@@ -10,7 +10,13 @@
   }
   .card-title{
     color: $Dark-purple;
+    text-transform: uppercase;
   
+  }
+  .card-text{
+    color: $Dark-purple;
+    font-size: 20px;
+    margin-bottom: 0;
   }
   .text-muted{
     color: $Dark-purple;
