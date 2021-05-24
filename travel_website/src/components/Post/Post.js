@@ -3,6 +3,8 @@ import './Post.scss';
 import PostData from "../PostList/PostData"
 import PostList from "../PostList/PostList"
 import NotFoundPage from "../../pages/ErrorsPage/NotFoundPage"
+import Comment from '../Comment/Comment'
+
 
 const Post = ({ match }) => {
     const date = match.params.date;
@@ -22,17 +24,21 @@ const Post = ({ match }) => {
                 ))}
                 {
                     update.postImage.map((img, key) => (
-                        <img src={img} alt={key}></img>
+                        <img class="postImage" src={img} alt={key}></img>
                     ))
                 }
+                <Comment></Comment>
             </div>
             
             <div className="col updateList">
                 <h3>Other Updates:</h3>
                 <PostList updates = {otherUpdates.slice(0,4)} />
+                
             </div>
             
+            
         </div>
+
         
         </>
     );

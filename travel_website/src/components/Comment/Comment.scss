@@ -1,0 +1,22 @@
+@import "../../styles/colors.scss";
+.add-comment-form{
+display: grid;
+margin-top: 20px;
+
+ h3{
+     color: $Blue-green;
+     font-weight: bold;
+ }
+ .send-comment{
+     background-color: $Blue-green;
+     border: none;
+     color: $Floral-white;
+ }
+ hr{
+    width: 100%;
+ }
+
+ input, textarea{
+     margin: 10px 0;
+ }
+}
