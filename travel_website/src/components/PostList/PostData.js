@@ -49,7 +49,7 @@ const PostData = [
         date: '11182021',
         stateName: 'NY',
         title: ' 4 Crazy weather',
-        imgUrl: 'https://c4.staticflickr.com/9/8562/28897228731_ff4447ef5f_b.jpg',
+        imgUrl: 'https://picsum.photos/200/500',
         postImage: [
             'https://picsum.photos/200/300',
             'https://picsum.photos/300/400',
@@ -63,7 +63,7 @@ const PostData = [
         date: '050920212',
         stateName: 'NC',
         title: 'I am the LAST',
-        imgUrl: 'https://c6.staticflickr.com/9/8342/28897193381_800db6419e_b.jpg',
+        imgUrl: 'https://picsum.photos/300/300',
         postImage: [
             'https://picsum.photos/200/300',
             'https://c7.staticflickr.com/9/8824/28868764222_19f3b30773_b.jpg',
@@ -78,8 +78,8 @@ const PostData = [
         date: '04202121',
         stateName: 'CO',
         city: 'Boulder',
-        title: 'The First in List Lorem ipsum dolor sit amet',
-        imgUrl: 'https://c3.staticflickr.com/9/8583/28354353794_9f2d08d8c0_b.jpg',
+        title: 'Lorem ipsum dolor sit amet',
+        imgUrl: 'https://picsum.photos/200/300',
         postImage: [
                 'https://c4.staticflickr.com/9/8578/28357117603_97a8233cf5_b.jpg',
                 'https://c6.staticflickr.com/9/8893/28897116141_641b88e342_b.jpg',
