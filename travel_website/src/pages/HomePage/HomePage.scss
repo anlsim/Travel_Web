@@ -1,7 +1,8 @@
-@import '../../styles/colors.scss';
-
+@import "../../scss/colors.scss";
+@import '../../scss/mediaQueries.scss';
 
 .rowHome{
+
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -16,4 +17,20 @@
     .card{
         height: 235px;
     }
+}
+
+@include mobile {
+ 
+    .mapDiv{
+        width: 100%;
+    }
+    .card-columns{
+        
+        max-width: 100%;
+    }
+    .card{
+        height: 100%;
+    }
+
+    
 }

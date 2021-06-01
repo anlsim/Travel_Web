@@ -4,10 +4,7 @@ const Hero = (props) => {
     return (
        
         <div className= 'hero'>
-            <div className='hero-img'>
-                <h1 className='text'>{props.title}</h1>
-            </div>
-            
+                <h1 className='hero-text'>{props.title}</h1>
         </div>
     )
 }

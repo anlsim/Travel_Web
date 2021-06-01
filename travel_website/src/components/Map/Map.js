@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 // import USAMap from "react-usa-map";
 import PostData from "../PostList/PostData";
-import { MapContainer, TileLayer, Marker, Popup, Circle, CircleMarker, Polyline } from 'react-leaflet';
+import { MapContainer, TileLayer,  Popup, Circle, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import'./Map.scss';
-import { popup } from 'leaflet';
+// import { popup } from 'leaflet';
 
 
 

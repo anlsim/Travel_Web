@@ -1,6 +1,7 @@
-@import "../../styles/colors.scss";
+@import "../../scss/colors.scss";
 
 .blogs {
+  display: flex;
   margin: 10px 20px 10px 250px;
 
   .card-columns{

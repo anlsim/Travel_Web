@@ -1,8 +1,18 @@
-@import '../../styles/colors.scss';
+@import "../../scss/colors.scss";
+@import '../../scss/mediaQueries.scss';
 
 .galleryContainer{
-    margin: 50px 15px 15px 50px;
+    margin: 0 15px 15px 50px;
     display: "block";
 
    
+}
+
+@include mobile {
+    .galleryContainer{
+        margin: 5px;
+    }
+    
+    
+    
 }

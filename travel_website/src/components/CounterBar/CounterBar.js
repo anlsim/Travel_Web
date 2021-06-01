@@ -11,8 +11,8 @@ export default function CounterBar() {
        const cities = PostData.map(obj => obj.cityName);
        return(     
        <div className="Bar">
-              <h1 id="titleBar">Cities Visited: {cities.length}</h1>
-              <h1 id="titleBar">Days on the road: {daysCounter}</h1>
+              <h1 className="titleBar">Cities Visited: {cities.length}</h1>
+              <h1 className="titleBar">Days on the road: {daysCounter}</h1>
        
        </div>
         

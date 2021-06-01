@@ -1,7 +1,5 @@
-@import './styles/colors.scss';
-
-
-
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./colors.scss";
 $dark:          $Dark-purple !default;
 $primary:       $Blue-green !default;
 $secondary:     $Yellow-crayola !default;
