@@ -10,7 +10,7 @@ import './BlogPage.scss'
 const BlogPage = () => (
     <>
     <Hero title = {'Blog'}/>
-    <SideMenu />
+    {/* <SideMenu /> */}
     <div className="blogs">
     <PostList updates = {PostData}/>
     </div>
