@@ -18,6 +18,7 @@ const Post = ({ match }) => {
         <>
         <div className="row postContainer">
             <div className="col-8 postDiv">
+                <div>
                 <h1>{update.title}</h1>
                 {update.content.map((paragraph, key) => (
                     <p key={key}>{paragraph}</p>
@@ -27,7 +28,27 @@ const Post = ({ match }) => {
                         <img class="postImage" src={img} alt={key}></img>
                     ))
                 }
-                <Comment></Comment>
+                </div>
+                <div>
+                    {
+                        update.postVideo.map((video, key)=>(
+                            <iframe 
+                                class="youtubeVideo"
+                                key={key}
+                                width="860" 
+                                height="615" 
+                                src={video}
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        ))
+                    }
+                </div>
+                
+                
+                <Comment/>
             </div>
             
             <div className="col updateList">
