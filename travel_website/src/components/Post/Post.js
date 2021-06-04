@@ -20,8 +20,9 @@ const Post = ({ match }) => {
             <div className="col-8 postDiv">
                 <div>
                 <h1>{update.title}</h1>
+                <p>{update.date}</p>
                 {update.content.map((paragraph, key) => (
-                    <p key={key}>{paragraph}</p>
+                    <p className="postDescriotion"key={key}>{paragraph}</p>
                 ))}
                 {
                     update.postImage.map((img, key) => (
