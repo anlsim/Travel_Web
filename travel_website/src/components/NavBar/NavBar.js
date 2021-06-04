@@ -1,14 +1,12 @@
-
-
-
-
-import React from 'react';
+import React from 'react'
 import {Link} from 'react-router-dom';
 import "./NavBar.scss";
 
 
-const NavBar = () => (
-<>
+export default function NavBar() {
+  const user = true;
+  return (
+    <>
 
 
 <div className="daNAv">
@@ -34,7 +32,7 @@ const NavBar = () => (
             <Link className="nav-link" to="/about">ABOUT</Link>
         </li>
         <li className="nav-item">
-            <Link className="nav-link" to="/login">LOGIN</Link>
+            <Link className="nav-link" to="/login">{user && "LOGOUT"}</Link>
         </li>
       </ul>
     </div>
@@ -43,7 +41,15 @@ const NavBar = () => (
 </div> 
 
 </>
+  )
+}
+
+// import React from 'react';
+
+// const user = false;
+// const NavBar = () => (
 
 
-);
-export default NavBar;
+
+// );
+// export default NavBar;

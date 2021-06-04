@@ -12,28 +12,27 @@ import NavBar from './components/NavBar/NavBar';
 import NotFoundPage from './pages/ErrorsPage/NotFoundPage';
 import GalleryPage from './pages/GalleryPage/Gallery';
 import MapPage from './pages/MapPage/MapPage';
-import State from './components/State/State';
 import Login from './pages/LoginPage/Login';
 import Register from './pages/RegisterPage/Register'
 
 
 class App extends Component {
   render() {
+    const user = true;
     return (
     
         <div className="App">
           <NavBar />
           <div>
             <Switch>
-                <Route path="/" component={HomePage} exact/>
-                <Route path="/about" component={AboutPage} />
-                <Route path="/blog" component={BlogPage} />
-                <Route path="/gallery" component={GalleryPage} />
-                <Route path="/post/:date" component={Post} />
-                <Route path="/state/:state" component={State} />
-                <Route path="/login" component={Login} />
-                <Route path="/register" component={Register} />
-                <Route path="/map" component={MapPage} />
+                <Route path="/" component={user ? HomePage : Register} exact/>
+                <Route path="/about" component={user ? AboutPage : Login} />
+                <Route path="/blog" component={user ? BlogPage : Login} />
+                <Route path="/gallery" component={user ? GalleryPage : Login} />
+                <Route path="/post/:date" component={user ? Post : Login} />
+                <Route path="/login" component={user ? HomePage : Login} />
+                <Route path="/register" component={user ? HomePage : Register} />
+                <Route path="/map" component={user ? MapPage : Login} />
                 <Route component={NotFoundPage} />
             </Switch>
         
