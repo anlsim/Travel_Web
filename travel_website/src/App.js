@@ -12,7 +12,9 @@ import NavBar from './components/NavBar/NavBar';
 import NotFoundPage from './pages/ErrorsPage/NotFoundPage';
 import GalleryPage from './pages/GalleryPage/Gallery';
 import MapPage from './pages/MapPage/MapPage';
-import State from './components/State/State'
+import State from './components/State/State';
+import Login from './pages/LoginPage/Login';
+import Register from './pages/RegisterPage/Register'
 
 
 class App extends Component {
@@ -29,6 +31,8 @@ class App extends Component {
                 <Route path="/gallery" component={GalleryPage} />
                 <Route path="/post/:date" component={Post} />
                 <Route path="/state/:state" component={State} />
+                <Route path="/login" component={Login} />
+                <Route path="/register" component={Register} />
                 <Route path="/map" component={MapPage} />
                 <Route component={NotFoundPage} />
             </Switch>

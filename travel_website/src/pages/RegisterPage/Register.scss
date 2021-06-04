@@ -1,0 +1,48 @@
+@import '../../scss/colors.scss';
+.registerDiv{
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .registerForm{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+       label{
+          margin: 10px 0; 
+       }
+
+       
+    }
+    .registerInput{
+        padding: 10px;
+        background-color: $Floral-white;
+        border:none;
+    }
+
+    .registerTitle{
+        font-size: 50px;
+    }
+    .registerButton{
+       margin-top: 20px; 
+       cursor: pointer;
+       background-color: $Blue-green;
+       border:none;
+       color: $Floral-white;
+       border-radius: 5px;
+       padding: 10px;
+    }
+    .loginButton{
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border:none;
+        border-radius: 5px;
+        padding: 20px;
+        margin-top: 20px; 
+        
+        cursor: pointer;
+    }
+}
