@@ -1,18 +1,24 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
+import axios from "axios";
 import './Post.scss';
-import PostData from "../PostList/PostData"
 import PostList from "../PostList/PostList"
 import NotFoundPage from "../../pages/ErrorsPage/NotFoundPage"
 import Comment from '../Comment/Comment'
 
 
 const Post = ({ match }) => {
-    const date = match.params.date;
-    const update = PostData.find(update => update.date === date);
-
+    const[posts, setPosts] = useState([]);
+    useEffect(()=>{
+        const fetchPost = async ()=> {
+            const res = await axios.get("/posts");
+            setPosts(res.data);
+        }
+        fetchPost();
+    }, [])
+    const updateId = match.params.updateId;
+    const update = posts.find(update => update._id === updateId);
     if (!update) return <NotFoundPage />
-
-    const otherUpdates = PostData.filter(update => update.date !== date);
+    const otherUpdates = posts.filter(update => update._id !== updateId);
 
     return (
         <>
@@ -20,19 +26,18 @@ const Post = ({ match }) => {
             <div className="col-8 postDiv">
                 <div>
                 <h1>{update.title}</h1>
-                <p>{update.date}</p>
-                {update.content.map((paragraph, key) => (
-                    <p className="postDescriotion"key={key}>{paragraph}</p>
-                ))}
+                <p>{new Date(update.createdAt).toDateString()}</p>
+                <p className="postDescriotion">{update.content}</p>
+            
                 {
-                    update.postImage.map((img, key) => (
-                        <img class="postImage" src={img} alt={key}></img>
+                    update.photos.map((img, key) => (
+                        <img class="postImage" src={img}></img>
                     ))
                 }
                 </div>
                 <div>
                     {
-                        update.postVideo.map((video, key)=>(
+                        update.videos.map((video, key)=>(
                             <iframe 
                                 class="youtubeVideo"
                                 key={key}
@@ -47,7 +52,6 @@ const Post = ({ match }) => {
                         ))
                     }
                 </div>
-                
                 
                 <Comment/>
             </div>

@@ -1,23 +1,44 @@
-import React from 'react';
-
-
+import {useEffect, useState} from 'react';
+import axios from "axios";
 import Hero from '../../components/Hero/Hero';
 import SideMenu from '../../components/SideMenu/SideMenu';
 import PostList from '../../components/PostList/PostList';
-import PostData from '../../components/PostList/PostData';
 import './BlogPage.scss'
 
-const BlogPage = () => (
+export default function BlogPage() {
+    const[posts, setPosts] = useState([]);
+    useEffect(()=>{
+        const fetchPost = async ()=> {
+            const res = await axios.get("/posts");
+            setPosts(res.data);
+        }
+        fetchPost();
+    }, [])
+    return (
     <>
-    <Hero title = {'Blog'}/>
-    {/* <SideMenu /> */}
-    <div className="blogs">
-    <PostList updates = {PostData}/>
-    </div>
+        <Hero title = {'Blog'}/>
+        {/* <SideMenu /> */}
+        <div className="blogs">
+        <PostList updates = {posts}/>
+        </div>
     
     </>
+    )
+}
 
-);
 
 
-export default BlogPage;
+// const BlogPage = () => (
+//     <>
+//     <Hero title = {'Blog'}/>
+//     {/* <SideMenu /> */}
+//     <div className="blogs">
+//     <PostList updates = {PostData}/>
+//     </div>
+    
+//     </>
+
+// );
+
+
+// export default BlogPage;

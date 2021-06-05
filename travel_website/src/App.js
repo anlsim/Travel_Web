@@ -29,7 +29,7 @@ class App extends Component {
                 <Route path="/about" component={user ? AboutPage : Login} />
                 <Route path="/blog" component={user ? BlogPage : Login} />
                 <Route path="/gallery" component={user ? GalleryPage : Login} />
-                <Route path="/post/:date" component={user ? Post : Login} />
+                <Route path="/post/:updateId" component={user ? Post : Login} />
                 <Route path="/login" component={user ? HomePage : Login} />
                 <Route path="/register" component={user ? HomePage : Register} />
                 <Route path="/map" component={user ? MapPage : Login} />
