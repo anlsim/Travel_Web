@@ -1,65 +1,46 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { MongoClient } from 'mongodb';
-
 const app = express();
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const authRoute = require("./routes/auth");
+const usersRoute = require("./routes/users");
+const postsRoute = require("./routes/posts");
+const statesRoute = require("./routes/states");
+const multer = require("multer");
 
-app.use(bodyParser.json());
 
-const withDB = async (operations, res) => {
-    try {
-        const client = await MongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true });
-        const db = client.db('travel-blog');
-    
-        await operations(db);
-    
-        client.close();
-    } catch (error) {
-        res.status(500).json({ message: 'Error connecting to db', error });
-    }
-}
+dotenv.config();
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 
-app.get('/api/updates/:name', async (req, res)=>{
-    withDB(async (db) => {
-   
-    const updateName = req.params.name;
-    
-    const updatesInfo = await db.collection('updates').findOne({name: updateName});
-    res.status(200).json(updatesInfo);
- 
-    }, res);
-});
+mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    })
+    .then(console.log("Connected To MONGO"))
+    .catch(err=>console.log(err));
 
-app.post('/api/updates/:name/like', async (req, res) => {
-    withDB(async (db) => {
-    const updateName = req.params.name;
-
-    const updateInfo = await db.collection('updates').findOne({name: updateName});
-    await db.collection('updates').updateOne({name: updateName},{
-        '$set': {
-            likes: updateInfo.likes + 1,
-        },
+    const storage = multer.diskStorage({
+        destination: (req, file, cb)=>{
+           cb(null, "images");
+        }, filename:(req, file, cb) => {
+            cb(null, req,body.name); 
+        }
     });
-    const updatedUpdateInfo = await db.collection('updates').findOne({name: updateName});
-    res.status(200).json(updatedUpdateInfo);
-   
-    }, res);
-});
-app.post('/api/updates/:name/add-comment', (req, res) => {
+    const upload = multer({storage:storage});
+    app.post("/api/upload", upload.single("file"),(req, res)=>{
+        res.status(200).json("File has been uploaded");
+    })
     
-    const { username, text } = req.body;
-    const updateName = req.params.name;
-    withDB(async (db) => {
-        const updateInfo = await db.collection('updates').findOne({ name: updateName });
-        await db.collection('updates').updateOne({ name: updateName }, {
-            '$set': {
-                comments: updateInfo.comments.concat({ username, text }),
-            },
-        });
-        const updatedUpdateInfo = await db.collection('updates').findOne({ name: updateName });
+    app.use("/api/auth", authRoute);   
+    app.use("/api/users", usersRoute);   
+    app.use("/api/posts", postsRoute); 
+    app.use("/api/states", statesRoute); 
 
-        res.status(200).json(updatedUpdateInfo);
-    }, res);
+
+app.listen(8000, () => {
+    console.log('Listening on port 8000');
 });
 
-app.listen(8000, () => console.log('Listening on port 8000'));
