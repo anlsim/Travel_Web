@@ -6,6 +6,11 @@ const PostSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
+    imgUrl:{
+        type:String,
+        required: true,
+    },
+
     content:{
         type:String,
         required: true,
@@ -32,7 +37,7 @@ const PostSchema = new mongoose.Schema({
         type: Array,
         required: false,
     },
-    video: {
+    videos: {
         type: Array,
         required: false,
         default: "",
