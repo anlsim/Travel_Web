@@ -31,7 +31,7 @@ const Post = ({ match }) => {
             
                 {
                     update.photos.map((img, key) => (
-                        <img class="postImage" src={img}></img>
+                        <img className="postImage" src={img} alt={key}></img>
                     ))
                 }
                 </div>
@@ -39,7 +39,7 @@ const Post = ({ match }) => {
                     {
                         update.videos.map((video, key)=>(
                             <iframe 
-                                class="youtubeVideo"
+                                className="youtubeVideo"
                                 key={key}
                                 width="860" 
                                 height="615" 

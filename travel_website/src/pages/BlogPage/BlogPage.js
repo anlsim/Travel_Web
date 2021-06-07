@@ -14,6 +14,7 @@ export default function BlogPage() {
         }
         fetchPost();
     }, [])
+    
     return (
     <>
         <Hero title = {'Blog'}/>

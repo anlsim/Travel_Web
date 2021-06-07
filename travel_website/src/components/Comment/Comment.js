@@ -20,7 +20,7 @@ const Comment = ({ articleName, setArticleInfo }) => {
     // }
 
     return (
-        <div class="add-comment-form">
+        <div className="add-comment-form">
             <h3>LEAVE A COMMENT</h3>
                 <hr/>
                
@@ -28,7 +28,7 @@ const Comment = ({ articleName, setArticleInfo }) => {
           
                 <textarea rows="4" cols="50" value={commentText} onChange={(event) => setCommentText(event.target.value)} placeholder="COMMENT" />
         
-            <button class="send-comment">LEAVE COMMENT</button>
+            <button className="send-comment">LEAVE COMMENT</button>
         </div>
     );
 }

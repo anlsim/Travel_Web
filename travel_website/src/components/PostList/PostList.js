@@ -3,6 +3,7 @@ import {Link } from 'react-router-dom';
 import "./PostList.scss";
 
 export default function PostList({updates}) {
+    
     return (
     
         <div className="card-columns">
