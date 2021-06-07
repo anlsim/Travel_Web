@@ -4,15 +4,21 @@ import Hero from '../../components/Hero/Hero';
 import CounterBar from '../../components/CounterBar/CounterBar'
 import "./MapPage.scss";
 
-const MapPage = () =>(
+
+const MapPage = () =>{
+
+    
+    return(
     <div>
-        <Hero title={'Map'}/>
-        <div className="mapDiv">
-            <Map />
-        </div>   
-        
-        <CounterBar/>
-    </div>
-);
+            <Hero title={'Map'}/>
+            <div className="mapDiv">
+                <Map />
+            </div>   
+            
+            <CounterBar/>
+        </div>
+    )
+    
+    };
 
 export default MapPage;
