@@ -13,7 +13,8 @@ import NotFoundPage from './pages/ErrorsPage/NotFoundPage';
 import GalleryPage from './pages/GalleryPage/Gallery';
 import MapPage from './pages/MapPage/MapPage';
 import Login from './pages/LoginPage/Login';
-import Register from './pages/RegisterPage/Register'
+import Register from './pages/RegisterPage/Register';
+import Publish from './pages/PublishPage/PublishPage';
 
 
 class App extends Component {
@@ -33,6 +34,7 @@ class App extends Component {
                 <Route path="/login" component={user ? HomePage : Login} />
                 <Route path="/register" component={user ? HomePage : Register} />
                 <Route path="/map" component={user ? MapPage : Login} />
+                <Route path="/publish" component={user ? Publish : Login} />
                 <Route component={NotFoundPage} />
             </Switch>
         

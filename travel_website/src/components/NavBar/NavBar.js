@@ -32,6 +32,9 @@ export default function NavBar() {
             <Link className="nav-link" to="/about">ABOUT</Link>
         </li>
         <li className="nav-item">
+            <Link className="nav-link" to="/publish">{user && "PUBLISH"}</Link>
+        </li>
+        <li className="nav-item">
             <Link className="nav-link" to="/login">{user && "LOGOUT"}</Link>
         </li>
       </ul>

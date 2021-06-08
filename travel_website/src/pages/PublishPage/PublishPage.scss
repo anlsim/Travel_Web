@@ -1,0 +1,29 @@
+.publishMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px;
+    width: 100%;
+
+    .publishForm{
+        min-width: 500px;
+    }
+
+    .formSections{
+        display: flex;
+    }
+    .fields{
+       display: flex;
+       flex-direction: column;
+       input, textarea, button{
+           margin: 5px;
+           padding: 10px;
+       }
+
+       textarea{
+           min-height: 400px;
+       }
+    }
+
+}

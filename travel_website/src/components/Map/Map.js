@@ -20,9 +20,9 @@ export default function Map() {
      
       fetchPost();
   }, [])
-  if(loading) return <h4>Loading Locations...</h4>
-
-  const coordinates = posts.map(obj => obj.location);
+  if(loading) return <h4>Loading map...</h4>
+  console.log(posts)
+  const coordinates = posts.map(p  => p.location);
   const lineColor = { color: '#FF8811', weight: 5 }
   const circleColor = { color: '#221C35', weight: 10 }
 
@@ -42,26 +42,21 @@ export default function Map() {
   return (
     <div id="mapId">
       <MapContainer {...mapSettings} > 
-          <TileLayer
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Polyline pathOptions={lineColor} positions={coordinates} />
-            {
-              coordinates.map((location, id)=>(
-                
-                <Circle key = {id} center={location} pathOptions={circleColor} radius={100}>
+        <TileLayer
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Polyline pathOptions={lineColor} positions={coordinates} />
+        {
+          posts.map(object=>(
+            
+            <Circle key = {object.id} center={object.location} pathOptions={circleColor} radius={100}>
               
-              <Popup>
-                {location}
-                </Popup>
-                  
-                </Circle>
+              <Popup>{object.city +", "+ object.state}</Popup> 
+            </Circle>
           
-              )
-              )
-                
-            }
+          ))
+        }
       </MapContainer> 
   </div>
   )

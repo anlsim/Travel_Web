@@ -7,14 +7,12 @@ import './HomePage.scss';
 
 export default function HomePage() {
     const[posts, setPosts] = useState([]);
-    const[loading, setloading] = useState(true);
     useEffect(()=>{
         const fetchPost = async ()=> {
             const res = await axios.get("/posts");
             setPosts(res.data);
             
         }
-       
         fetchPost();
     }, [])
 
