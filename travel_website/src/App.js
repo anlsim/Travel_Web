@@ -19,7 +19,7 @@ import Publish from './pages/PublishPage/PublishPage';
 
 class App extends Component {
   render() {
-    const user = true;
+    const user = false;
     return (
     
         <div className="App">
