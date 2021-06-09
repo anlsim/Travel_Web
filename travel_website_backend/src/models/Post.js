@@ -1,3 +1,4 @@
+const { Double } = require("bson");
 const mongoose = require("mongoose");
 
 const PostSchema = new mongoose.Schema({
@@ -20,7 +21,7 @@ const PostSchema = new mongoose.Schema({
         required: true,
       },
     photos:{
-        type:Array,
+        type: Array,
         required: false,
         default: "",
     },
@@ -35,6 +36,7 @@ const PostSchema = new mongoose.Schema({
     },
     location:{
         type: Array,
+        of: Number,
         required: true,
 
     },
