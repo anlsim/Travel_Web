@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import axios from "axios";
 import Hero from '../../components/Hero/Hero';
-import SideMenu from '../../components/SideMenu/SideMenu';
+// import SideMenu from '../../components/SideMenu/SideMenu';
 import PostList from '../../components/PostList/PostList';
 import './BlogPage.scss'
 

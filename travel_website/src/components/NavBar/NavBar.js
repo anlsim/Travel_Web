@@ -9,6 +9,7 @@ export default function NavBar() {
   const handleLogOut = () => {
     dispatch({type: "LOGOUT"});
   };
+  // console.log(user.admin)
   return (
     <>
 
@@ -35,13 +36,30 @@ export default function NavBar() {
         <li className="nav-item">
             <Link className="nav-link" to="/about">ABOUT</Link>
         </li>
+        
+        { user ? (
+         <>
+         {user.admin &&
         <li className="nav-item">
-            <Link className="nav-link" to="/publish">{user && "PUBLISH"}</Link>
+            <Link className="nav-link" to="/publish">PUBLISH</Link>
+         
         </li>
-        <li className="nav-item" onClick={handleLogOut}><p className="nav-link">{user && "LOGOUT"}</p>
-            {/* <Link className="nav-link" to="/login">{user && "LOGOUT"}</Link> */}
+        }
+        
+        <li className="nav-item" onClick={handleLogOut}>
+          <p className="nav-link"> {user && "LOGOUT"}</p>
+        
         </li>
+        </>
+        ) : (
+          <li className="nav-item">
+            <Link className="nav-link" to="/login">{user && "LOGOUT"}</Link> 
+        </li>
+        )}
+
+        
       </ul>
+      {/* <div>Welcome, {user.fullName}</div> */}
     </div>
   </div>
 </nav>

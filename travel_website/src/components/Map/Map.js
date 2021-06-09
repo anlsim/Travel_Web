@@ -1,6 +1,5 @@
 import {useEffect, useState} from 'react';
 import axios from "axios";
-import PostList from '../../components/PostList/PostList';
 import { MapContainer, TileLayer,  Popup, Circle, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import'./Map.scss';

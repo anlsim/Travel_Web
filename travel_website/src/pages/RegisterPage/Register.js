@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import axios from "axios";
 import {Link} from 'react-router-dom';
 import './Register.scss';
@@ -9,12 +9,6 @@ export default function Register() {
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
 
-    try{
-        
-    }
-    catch(err){
-        console.log(err);
-    }
     const handleRegister = async (e) => {
         e.preventDefault();
         setError(false);
