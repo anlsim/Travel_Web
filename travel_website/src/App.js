@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import { useContext} from 'react';
 import {
   Route, Switch
 } from 'react-router-dom';
@@ -16,10 +16,11 @@ import Login from './pages/LoginPage/Login';
 import Register from './pages/RegisterPage/Register';
 import Publish from './pages/PublishPage/PublishPage';
 
+import {Context } from "./context/Contex";
 
-class App extends Component {
-  render() {
-    const user = false;
+
+function App () {
+    const {user} = useContext(Context);
     return (
     
         <div className="App">
@@ -44,6 +45,6 @@ class App extends Component {
     );
   }
 
-}
+
 
 export default App;

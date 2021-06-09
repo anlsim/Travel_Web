@@ -1,10 +1,14 @@
-import React from 'react'
+import {useContext}from 'react'
 import {Link} from 'react-router-dom';
+import {Context} from "../../context/Contex";
 import "./NavBar.scss";
 
 
 export default function NavBar() {
-  const user = true;
+  const {user, dispatch } = useContext(Context);
+  const handleLogOut = () => {
+    dispatch({type: "LOGOUT"});
+  };
   return (
     <>
 
@@ -34,8 +38,8 @@ export default function NavBar() {
         <li className="nav-item">
             <Link className="nav-link" to="/publish">{user && "PUBLISH"}</Link>
         </li>
-        <li className="nav-item">
-            <Link className="nav-link" to="/login">{user && "LOGOUT"}</Link>
+        <li className="nav-item" onClick={handleLogOut}><p className="nav-link">{user && "LOGOUT"}</p>
+            {/* <Link className="nav-link" to="/login">{user && "LOGOUT"}</Link> */}
         </li>
       </ul>
     </div>
