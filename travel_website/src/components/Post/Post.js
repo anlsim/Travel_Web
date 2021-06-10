@@ -3,7 +3,7 @@ import axios from "axios";
 import './Post.scss';
 import PostList from "../PostList/PostList"
 import NotFoundPage from "../../pages/ErrorsPage/NotFoundPage"
-import Comment from '../Comment/Comment';
+import AddComment from '../AddComment/AddComment';
 import CommentsList from '../CommentsList/CommentsList';
 import { comment } from 'postcss';
 
@@ -69,7 +69,7 @@ const Post = ({ match }) => {
                     }
                 </div>
                 <div className="postDiv-commentForm">
-                    <Comment/>
+                    <AddComment/>
                 </div>
                 <div>
                     <hr/>

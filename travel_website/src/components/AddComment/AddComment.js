@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Comment.scss';
+import './AddComment.scss';
 
 const Comment = ({ articleName, setArticleInfo }) => {
     const [username, setUsername] = useState('');
