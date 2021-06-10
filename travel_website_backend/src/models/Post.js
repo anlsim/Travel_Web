@@ -37,13 +37,13 @@ const PostSchema = new mongoose.Schema({
     location:{
         type: Array,
         of: Number,
-        required: true,
+        required: false,
+        default: null,
 
     },
-    videos: {
-        type: Array,
+    video: {
+        type: String,
         required: false,
-        default: "",
     }
 
     },{timestamps: true} 

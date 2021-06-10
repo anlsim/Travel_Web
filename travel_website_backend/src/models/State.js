@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const Statechema = new mongoose.Schema({
+const StateSchema = new mongoose.Schema({
     name:{
         type:String,
         required: true,
@@ -10,4 +10,4 @@ const Statechema = new mongoose.Schema({
     }
 );
 
-module.exports = mongoose.model("State", Statechema);
+module.exports = mongoose.model("State", StateSchema);
