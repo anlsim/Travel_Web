@@ -24,41 +24,44 @@ const Post = ({ match }) => {
         <>
         <div className="row postContainer">
             <div className="col-8 postDiv">
-                <div>
                 <h1>{update.title}</h1>
+                <h5>{update.city}, {update.state}</h5>
                 <p>{new Date(update.createdAt).toDateString()}</p>
-                <p className="postDescriotion">{update.content}</p>
-            
+
+                <p className="postDiv-postDescription">{update.content}</p>
+
                 {
                     update.photos.map((img, key) => (
-                        <img className="postImage" src={img} alt={key}></img>
+                        <img className="postDiv-postImage" src={img} alt={key}></img>
                     ))
                 }
-                </div>
-                <div>
+                <div className="postDiv-videoDiv">
                     {
-                        update.videos.map((video, key)=>(
-                            <iframe 
-                                className="youtubeVideo"
-                                key={key}
-                                width="860" 
-                                height="615" 
-                                src={video}
-                                title="YouTube video player" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                            </iframe>
-                        ))
+                    update.video !== "" &&
+                        <iframe 
+                            width="560"
+                            height="315"
+                            src={update.video}
+                            title="YouTube video player" 
+                            
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            >
+                        </iframe>
                     }
                 </div>
-                
-                <Comment/>
+                <div className="postDiv-commentForm">
+                    <Comment/>
+                </div>
+                <div>
+                    <hr/>
+                <h3>Comments:</h3>
+                </div>
             </div>
             
             <div className="col updateList">
                 <h3>Other Updates:</h3>
-                <PostList updates = {otherUpdates.slice(0,4)} />
+                <PostList updates = {otherUpdates.reverse().slice(0,6)} />
                 
             </div>
             

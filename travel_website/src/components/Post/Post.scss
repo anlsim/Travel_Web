@@ -2,32 +2,54 @@
 
 
 .postContainer{
+    font-family: 'Roboto', sans-serif;
     display: flex;
     margin: 50px 15px 15px 50px;
     text-align: left;
 
     h1{
         margin-left: 0;
-        color: $Dark-purple;
+        text-transform: uppercase;
+        color: $Blue-green;
     }
     .postDiv{
-        margin-left: 40px;
-        max-width: 1400px;
+        
+        margin-left: 160px;
+        max-width: 1050px;
+
+        &-postDescription{
+            max-width: 900px;
+            text-align: justify;
+            text-justify: auto;
+        }
+
+        &-postDescriotion::first-letter{
+            margin-left: 20px;
+            font-size: 30px;
+            font-weight: 500;
+            
+        }
+
+        &-postImage{
+
+            margin: 10px;
+            max-width: 500px;
+            max-height: 500px;
+        }
+
+        &-commentForm{
+            width: 550px;
+        }
+        
       
     }
-    .postDescriotion::first-letter{
-        margin-left: 20px;
-        font-size: 30px;
-        font-weight: 600;
-    }
-    .postImage{
 
-        margin: 10px;
-        max-width: 500px;
-        max-height: 500px;
-    }
-    .youtubeVideo{
-        border-color: none;
+    iframe{
+        overflow: hidden;
+        padding-bottom: 0;
+        border: none;
+       
+        
     }
     
 }

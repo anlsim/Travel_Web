@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="homeDiv">
             <div className='row rowHome'>
             <div className='col-9'> <Map/> </div>
-            <div className='col'> <PostList className='updates' updates = {posts.slice(0,3)}/></div>
+            <div className='col'> <PostList className='updates' updates = {posts.reverse().slice(0,3)}/></div>
             
             </div>
             <div className='counterBar'>

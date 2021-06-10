@@ -20,7 +20,7 @@ export default function BlogPage() {
         <Hero title = {'Blog'}/>
         {/* <SideMenu /> */}
         <div className="blogs">
-        <PostList updates = {posts}/>
+        <PostList updates = {posts.reverse()}/>
         </div>
     
     </>
