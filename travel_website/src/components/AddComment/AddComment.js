@@ -3,7 +3,9 @@ import './Comment.scss';
 
 const Comment = ({ articleName, setArticleInfo }) => {
     const [username, setUsername] = useState('');
-    const [commentText, setCommentText] = useState('');
+    const [comment, setComment] = useState('');
+    const [postId, setPosId] = useState('');
+    
 
     // const addComment = async () => {
     //     const result = await fetch(`/api/articles/${articleName}/add-comment`, {
@@ -26,7 +28,7 @@ const Comment = ({ articleName, setArticleInfo }) => {
                
                 <input type="text" value={username} onChange={(event) => setUsername(event.target.value)}  placeholder="NAME"/>
           
-                <textarea rows="4" cols="50" value={commentText} onChange={(event) => setCommentText(event.target.value)} placeholder="COMMENT" />
+                <textarea rows="4" cols="50" value={comment} onChange={(event) => setComment(event.target.value)} placeholder="COMMENT" />
         
             <button className="send-comment">LEAVE COMMENT</button>
         </div>

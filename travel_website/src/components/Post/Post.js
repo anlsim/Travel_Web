@@ -3,20 +3,38 @@ import axios from "axios";
 import './Post.scss';
 import PostList from "../PostList/PostList"
 import NotFoundPage from "../../pages/ErrorsPage/NotFoundPage"
-import Comment from '../Comment/Comment'
+import Comment from '../Comment/Comment';
+import CommentsList from '../CommentsList/CommentsList';
+import { comment } from 'postcss';
 
 
 const Post = ({ match }) => {
+    const[loading, setloading] = useState(true);
     const[posts, setPosts] = useState([]);
+    const[comments, setComments] = useState([]);
     useEffect(()=>{
         const fetchPost = async ()=> {
             const res = await axios.get("/posts");
             setPosts(res.data);
+            setloading(false);
         }
         fetchPost();
-    }, [])
+    }, []);
+
+    useEffect(()=>{
+        const fetchComments = async ()=> {
+            const res = await axios.get("/comments");
+            setComments(res.data);
+        }
+        fetchComments();
+    }, []);
+    if(loading) return <h4>Loading post...</h4>
     const updateId = match.params.updateId;
     const update = posts.find(update => update._id === updateId);
+
+    const filterComments = comments.filter(c =>  c.postId === update._id);
+    
+    console.log(filterComments)
     if (!update) return <NotFoundPage />
     const otherUpdates = posts.filter(update => update._id !== updateId);
 
@@ -55,7 +73,7 @@ const Post = ({ match }) => {
                 </div>
                 <div>
                     <hr/>
-                <h3>Comments:</h3>
+                    <CommentsList comments={filterComments}/>
                 </div>
             </div>
             

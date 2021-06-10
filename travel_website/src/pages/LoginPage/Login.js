@@ -27,22 +27,22 @@ export default function Login() {
             <span className="loginTitle">Login</span>
             <form className="loginForm" onSubmit={handleLogin}>
                 <input 
-                    className="loginInput" 
+                    className="loginForm-loginInput" 
                     type="email" 
                     placeholder="Enter your email..."
                     ref={emailRef}
                 />
                 <input 
-                    className="loginInput" 
+                    className="loginForm-loginInput" 
                     type="password" 
                     placeholder="Enter your password..."
                     ref={passwordRef}
                     />
-                <button className="loginButton" type="submit" disabled={isFetching}>Login</button>
+                <button className="loginForm-loginButton" type="submit" disabled={isFetching}>Login</button>
             </form>
-            <button className="registerButton">
+            {/* <button className="registerButton">
                 <Link to="/register" style={{ textDecoration: "none", color:" black" }}>Register</Link>
-            </button>
+            </button> */}
         </div>
     )
 }

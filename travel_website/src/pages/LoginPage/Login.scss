@@ -14,30 +14,35 @@
        label{
           margin: 10px 0; 
        }
-
-       
-    }
-    .loginInput{
+       &-loginInput{
+        margin: 10px;
         padding: 10px;
         background-color: $Floral-white;
         border:none;
+        }
+        &-loginButton{
+            width: 100%;
+            margin-left: 0;
+            margin-top: 20px; 
+            cursor: pointer;
+            background-color: $Blue-green;
+            border:none;
+            color: $Floral-white;
+            border-radius: 5px;
+            padding: 10px;
+         }
+         &-loginButton:disabled{
+             cursor:not-allowed;
+         }
+
+       
     }
+   
 
     .loginTitle{
         font-size: 50px;
     }
-    .loginButton{
-       margin-top: 20px; 
-       cursor: pointer;
-       background-color: $Blue-green;
-       border:none;
-       color: $Floral-white;
-       border-radius: 5px;
-       padding: 10px;
-    }
-    .loginButton:disabled{
-        cursor:not-allowed;
-    }
+   
     .registerButton{
         position: absolute;
         top: 60px;

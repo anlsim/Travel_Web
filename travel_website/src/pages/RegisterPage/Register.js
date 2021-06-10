@@ -31,21 +31,21 @@ export default function Register() {
         <form className="registerForm" onSubmit={handleRegister}>
 
             <input 
-                className="registerInput" 
+                className="registerForm-input" 
                 type="text" 
                 placeholder="Full Name"
                 required
                 onChange={e=>setFullName(e.target.value)}
             />
             <input 
-                className="registerInput" 
+                className="registerForm-input" 
                 type="text" 
                 placeholder="Email Address"
                 required
                 onChange={e=>setEmail(e.target.value)}
             />
             <input 
-                className="registerInput" 
+                className="registerForm-input" 
                 type="password"
                 placeholder="Password"
                 required
@@ -56,11 +56,11 @@ export default function Register() {
                 type="password" 
                 placeholder="Confirm Password"
             /> */}
-            <button className="registerButton" type="submit">register</button>
+            <button className="registerForm-button" type="submit">register</button>
         </form>
-        <button className="loginButton">
+        {/* <button className="loginButton">
             <Link to="/login" style={{ textDecoration: "none", color:" black" }}>Login</Link>
-        </button>
+        </button> */}
         {error && <span>Something went wrong!</span> }
     </div>
     )

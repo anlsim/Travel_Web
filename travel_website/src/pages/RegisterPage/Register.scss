@@ -10,32 +10,36 @@
         margin-top: 20px;
         display: flex;
         flex-direction: column;
-        min-width: 450px;
+        min-width: 400px;
        label{
           margin: 10px 0; 
        }
 
+       &-input{
+            margin: 10px;
+            padding: 10px;
+            background-color: $Floral-white;
+            border:none;
+        }
+
+        &-button{
+            margin-left:0;
+           margin-top: 20px; 
+           cursor: pointer;
+           background-color: $Blue-green;
+           border:none;
+           color: $Floral-white;
+           border-radius: 5px;
+           padding: 10px;
+        }
+
        
     }
-    .registerInput{
-        margin: 10px;
-        padding: 10px;
-        background-color: $Floral-white;
-        border:none;
-    }
-
+    
     .registerTitle{
         font-size: 50px;
     }
-    .registerButton{
-       margin-top: 20px; 
-       cursor: pointer;
-       background-color: $Blue-green;
-       border:none;
-       color: $Floral-white;
-       border-radius: 5px;
-       padding: 10px;
-    }
+    
     .loginButton{
         position: absolute;
         top: 60px;

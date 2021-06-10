@@ -15,9 +15,9 @@ export default function PublishPage() {
     const {user} = useContext(Context);
 
 
-        const handlePublish = async (e) => {
-            e.preventDefault();
-            const newPost = {
+    const handlePublish = async (e) => {
+        e.preventDefault();
+        const newPost = {
                 userId: user.email,
                 title,
                 city, 
@@ -27,22 +27,17 @@ export default function PublishPage() {
                 photos,
                 video,
                 content,
-
-            }
-            setLocation(arr => [...arr, location])
-            try{
-            
+        }
+        setLocation(arr => [...arr, location])
+        try{
             const res = await axios.post("/posts", newPost);
             window.location.replace("/post/" + res.data._id)
-            } catch(err){
+        } catch(err){
                 console.log(err)
-            }
+        }
 
         };
           
-  
-        
-   
 
     return (
         <div className="publishMain">
@@ -69,17 +64,6 @@ export default function PublishPage() {
                         placeholder="Coordinates"
                         onChange={e=> setLocation(parseFloat(e.target.value))}
                     />
-                    
-                    {/* <input 
-                        type="text" 
-                        placeholder="Coordinates 1"
-                        onChange={e=> setLocation(parseFloat(e.target.value))}
-                    /> */}
-                    {/* <input 
-                        type="text" 
-                        placeholder="Coordinates "
-                        onChange={e=> setLocation( e.target.value)}
-                    /> */}
                     <input 
                         type="text" 
                         placeholder="Photo Cover"
