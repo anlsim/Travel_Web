@@ -7,7 +7,7 @@ export default function PublishPage() {
     const [title, setTitle] = useState("");
     const [city, setCity] = useState("");
     const [state, setState] = useState("");
-    const [location, setLocation] = useState([{},{}]);
+    const [location, setLocation] = useState([]);
     const [photos, setPhotos] = useState([]);
     const [imgUrl, setimgUrl] = useState("");
     const [video, setVideo] = useState("");
@@ -64,17 +64,12 @@ export default function PublishPage() {
                         placeholder="State"
                         onChange={e=> setState(e.target.value)}
                     />
-                    {
-                    location.map((loc, index) =>{
-                        return(
-                            <input 
-                                type="text" 
-                                placeholder="Coordinates"
-                                onChange={e=> setLocation(parseFloat(e.target.value))}
+                    <input 
+                        type="text" 
+                        placeholder="Coordinates"
+                        onChange={e=> setLocation(parseFloat(e.target.value))}
                     />
-                        );
-                    })
-                    }
+                    
                     {/* <input 
                         type="text" 
                         placeholder="Coordinates 1"

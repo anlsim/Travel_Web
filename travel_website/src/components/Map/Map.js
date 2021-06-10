@@ -20,8 +20,8 @@ export default function Map() {
       fetchPost();
   }, [])
   if(loading) return <h4>Loading map...</h4>
-  console.log(posts)
-  const coordinates = posts.map(p  => p.location);
+
+  const coordinates = posts.filter(a => a.location.length > 0).map(p => p.location);
   const lineColor = { color: '#FF8811', weight: 5 }
   const circleColor = { color: '#221C35', weight: 10 }
 
@@ -47,7 +47,7 @@ export default function Map() {
         />
         <Polyline pathOptions={lineColor} positions={coordinates} />
         {
-          posts.map(object=>(
+          posts.filter(a => a.location.length > 0).map(object=>(
             
             <Circle key = {object.id} center={object.location} pathOptions={circleColor} radius={100}>
               

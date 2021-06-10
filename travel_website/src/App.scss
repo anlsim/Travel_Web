@@ -1,12 +1,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import "./scss/colors.scss";
+@import "~bootstrap/scss/bootstrap";
 body{
   font-family: 'Roboto', sans-serif;
 }
 a{
   text-decoration: none;
-  color: #221C35;
+  color: $Dark-purple;
 }
 path {
   pointer-events: all;
@@ -15,5 +16,3 @@ path:hover {
   opacity: 0.5;
   cursor: pointer;
 }
-
-@import "~bootstrap/scss/bootstrap";
