@@ -71,7 +71,7 @@ const Post = ({ match }) => {
                     <AddComment post_Id={updateId}/>
                 </div>
                 <div>
-                    <hr/>
+                   
                     <CommentsList comments={filterComments}/>
                 </div>
             </div>

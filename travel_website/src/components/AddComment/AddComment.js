@@ -27,15 +27,16 @@ const AddComment = ({ post_Id}) => {
         };
 
     return (
-        <div className="add-comment-form">
-            <h3>LEAVE A COMMENT</h3>
-                <hr/>
-               
-                <input type="text" value={userName} onChange={e => setUserName(e.target.value)}  placeholder="NAME"/>
-          
-                <textarea rows="4" cols="50" value={comment} onChange={e => setComment(e.target.value)} placeholder="COMMENT" />
+        <div className="addComment">
         
-            <button className="send-comment"onClick={handleComment}>LEAVE COMMENT</button>
+            <h3>LEAVE A COMMENT</h3>
+               
+            <input className="addComment-name" type="text" value={userName} onChange={e => setUserName(e.target.value)}  placeholder="NAME"/>
+          
+            <textarea  className="addComment-text"rows="4" cols="50" value={comment} onChange={e => setComment(e.target.value)} placeholder="COMMENT..." />
+        
+            <button className="addComment-btn" onClick={handleComment}>LEAVE COMMENT</button>
+            {/* <hr/> */}
         </div>
     );
 }
