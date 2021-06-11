@@ -1,12 +1,14 @@
 import React from 'react';
 import Hero from '../../components/Hero/Hero';
 import "./AboutPage.scss";
+import SideMenu from '../../components/SideMenu/SideMenu';
 
 const AboutPage = () => (
     <>
+
         <Hero title={'About Us'}/>
         <div className="AboutMain">
-        <p>
+        <p className="AboutMain-description">
             Friends are not food mesmerizing birds and walk on keyboard behind the couch, 
             or litter kitter kitty litty little kitten big roar roar feed me. Crash against
             wall but walk away like nothing happened. Scratch at fleas, meow until belly rubs,
@@ -36,8 +38,10 @@ const AboutPage = () => (
             so eat a rug and furry furry hairs everywhere oh no human coming lie on counter 
             don't get off counter all of a sudden cat goes crazy poop on couch.  
 
-
         </p>
+        <div className="AboutMain-pictures">
+            <img src="https://picsum.photos/600/600"></img>
+        </div>
     </div>
     </>
 

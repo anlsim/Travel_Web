@@ -1,4 +1,20 @@
+@import "../../scss/colors.scss";
+@import "../../scss//mediaQueries.scss";
 .AboutMain{
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin: 0 15px 15px 50px;
+
+    &-description{
+        max-width: 800px;
+        padding: 10px;
+        margin-right: 30px;
+        text-align: justify;
+        text-justify: auto;
+    }
+    &-pictures{
+        padding: 10px;
+        overflow: hidden;
+    }
 }

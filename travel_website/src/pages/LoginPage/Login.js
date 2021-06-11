@@ -1,7 +1,6 @@
 import { useContext, useRef } from "react";
 import axios from "axios";
 import { Context } from "../../context/Contex";
-import {Link} from 'react-router-dom';
 import "./Login.scss";
 
 export default function Login() {

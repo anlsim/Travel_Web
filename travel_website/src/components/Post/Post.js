@@ -5,7 +5,6 @@ import PostList from "../PostList/PostList"
 import NotFoundPage from "../../pages/ErrorsPage/NotFoundPage"
 import AddComment from '../AddComment/AddComment';
 import CommentsList from '../CommentsList/CommentsList';
-import { comment } from 'postcss';
 
 
 const Post = ({ match }) => {

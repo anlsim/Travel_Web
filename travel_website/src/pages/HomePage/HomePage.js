@@ -16,6 +16,8 @@ export default function HomePage() {
         fetchPost();
     }, [])
 
+    const citiesList = posts.map(obj => obj.city);
+
     return (
         <div className="homeDiv">
             <div className='row rowHome'>
@@ -24,7 +26,7 @@ export default function HomePage() {
             
             </div>
             <div className='counterBar'>
-            <CounterBar />
+            <CounterBar cities = {citiesList}/>
             </div>
         </div>
     )
