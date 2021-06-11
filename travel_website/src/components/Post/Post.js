@@ -69,7 +69,7 @@ const Post = ({ match }) => {
                     }
                 </div>
                 <div className="postDiv-commentForm">
-                    <AddComment/>
+                    <AddComment post_Id={updateId}/>
                 </div>
                 <div>
                     <hr/>

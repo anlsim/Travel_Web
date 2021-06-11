@@ -1,38 +1,43 @@
 import React, { useState } from 'react';
 import './AddComment.scss';
+import axios from "axios";
 
-const Comment = ({ articleName, setArticleInfo }) => {
-    const [username, setUsername] = useState('');
+const AddComment = ({ post_Id}) => {
+
+    const [userName, setUserName] = useState('');
     const [comment, setComment] = useState('');
     const [postId, setPosId] = useState('');
     
+    const handleComment = async (e) => {
+        e.preventDefault();
+        setPosId(post_Id)
+        const newComment = {
+                userName,
+                comment,
+                postId,
+        }
+        try{
+             await axios.post("/comments", newComment);
+             window.location.reload();
+            
+        } catch(err){
+                console.log(err)
+        }
 
-    // const addComment = async () => {
-    //     const result = await fetch(`/api/articles/${articleName}/add-comment`, {
-    //         method: 'post',
-    //         body: JSON.stringify({ username, text: commentText }),
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         }
-    //     });
-    //     const body = await result.json();
-    //     setArticleInfo(body);
-    //     setUsername('');
-    //     setCommentText('');
-    // }
+        };
 
     return (
         <div className="add-comment-form">
             <h3>LEAVE A COMMENT</h3>
                 <hr/>
                
-                <input type="text" value={username} onChange={(event) => setUsername(event.target.value)}  placeholder="NAME"/>
+                <input type="text" value={userName} onChange={e => setUserName(e.target.value)}  placeholder="NAME"/>
           
-                <textarea rows="4" cols="50" value={comment} onChange={(event) => setComment(event.target.value)} placeholder="COMMENT" />
+                <textarea rows="4" cols="50" value={comment} onChange={e => setComment(e.target.value)} placeholder="COMMENT" />
         
-            <button className="send-comment">LEAVE COMMENT</button>
+            <button className="send-comment"onClick={handleComment}>LEAVE COMMENT</button>
         </div>
     );
 }
 
-export default Comment;
+export default AddComment;
