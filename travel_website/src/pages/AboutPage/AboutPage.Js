@@ -1,7 +1,6 @@
 import React from 'react';
 import Hero from '../../components/Hero/Hero';
 import "./AboutPage.scss";
-import SideMenu from '../../components/SideMenu/SideMenu';
 
 const AboutPage = () => (
     <>
@@ -40,7 +39,7 @@ const AboutPage = () => (
 
         </p>
         <div className="AboutMain-pictures">
-            <img src="https://picsum.photos/600/600"></img>
+            <img src="https://picsum.photos/600/600" alt="AboutPic"></img>
         </div>
     </div>
     </>
