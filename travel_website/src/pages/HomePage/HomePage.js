@@ -20,10 +20,14 @@ export default function HomePage() {
 
     return (
         <div className="homeDiv">
-            <div className='row rowHome'>
-            <div className='col-9'> <Map/> </div>
-            <div className='col'> <PostList className='updates' updates = {posts.reverse().slice(0,3)}/></div>
-            
+            <div className='rowHome'>
+                <div className='mapDiv'> 
+                    <Map/> 
+                </div>
+                <div className='col updatesDiv'> 
+                    <PostList className='updateContainer' updates = {posts.reverse().slice(0,3)}/>
+                </div>
+                
             </div>
             <div className='counterBar'>
             <CounterBar cities = {citiesList}/>

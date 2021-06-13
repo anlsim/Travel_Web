@@ -39,7 +39,7 @@ export default function Map() {
       zoom: DEFAULT_ZOOM,
     };
   return (
-    <div id="mapId">
+    <div className="mapId">
       <MapContainer {...mapSettings} > 
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

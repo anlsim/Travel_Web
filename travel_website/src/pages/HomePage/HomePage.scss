@@ -2,11 +2,19 @@
 @import '../../scss/mediaQueries.scss';
 
 .rowHome{
-    margin:  20px 20px 20px 20px;
-
-    .counterBar{
-        margin-top: 10px;
+    margin:  20px;
+    .mapDiv{
+        display: inline-block;
+        width: 70%;
     }
+    .updatesDiv{
+        display: inline-block;
+        width: 30%;
+        
+
+    }
+
+   
     .card-columns{
         column-count: 1;
         max-width: 600px;
@@ -15,18 +23,23 @@
         height: 235px;
     }
 }
+.counterBar{
+    margin-top: 10px;
+}
 
 @include mobile {
  
-    .mapDiv{
-        width: 100%;
-    }
-    .card-columns{
-        
-        max-width: 100%;
-    }
-    .card{
-        height: 100%;
+    .rowHome{
+        margin:  5px;
+        .mapDiv{
+            // margin: 5px;
+            width: 98%;
+        }
+
+        .updatesDiv{
+            width: 100%;
+            
+        }
     }
 
     
