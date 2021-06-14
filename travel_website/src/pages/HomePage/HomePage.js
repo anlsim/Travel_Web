@@ -11,7 +11,6 @@ export default function HomePage() {
         const fetchPost = async ()=> {
             const res = await axios.get("/posts");
             setPosts(res.data);
-            
         }
         fetchPost();
     }, [])

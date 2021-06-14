@@ -1,5 +1,5 @@
 @import "../../scss/colors.scss";
-
+@import '../../scss/mediaQueries.scss';
 
 .postContainer{
     font-family: 'Roboto', sans-serif;
@@ -31,10 +31,11 @@
         }
 
         &-postImage{
-
+            display: flex;
             margin: 10px;
-            max-width: 500px;
-            max-height: 500px;
+            max-width: 450px;
+            max-height: 450px;
+            overflow: hidden;
         }
 
         &-commentForm{
@@ -68,5 +69,33 @@
         height: 235px;
     }
 }
+
+@include mobile {
+    .postContainer{
+        margin: 10px 0 0 5px;
+       .postDiv{
+            margin:0; 
+            &-postImage{
+                max-width: 300px;
+            }
+            &-commentForm{
+                margin: 0;
+                width: 320px;
+            }
+        
+        }
+    }
+
+    .updateList{
+        margin: 0;
+        .card-columns{
+            column-count: 1;
+            max-width: 450px;
+        }
+    }
+
+}
+
+
 
 

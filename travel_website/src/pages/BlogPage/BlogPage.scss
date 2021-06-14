@@ -1,4 +1,5 @@
 @import "../../scss/colors.scss";
+@import '../../scss/mediaQueries.scss';
 
 .blogs {
   display: flex;
@@ -11,6 +12,17 @@
   .card{
     height: 255px;
   }
+
+}
+
+@include mobile {
+.blogs{
+  margin: 10px;
+
+  .card{
+    height: 200px;
+  }
+}
 
 }
 
