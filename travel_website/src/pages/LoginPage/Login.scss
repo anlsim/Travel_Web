@@ -1,4 +1,6 @@
 @import '../../scss/colors.scss';
+@import '../../scss/mediaQueries.scss';
+
 .loginDiv{
     height: calc(100vh - 50px);
     display: flex;
@@ -8,7 +10,7 @@
 
     .loginForm{
         margin-top: 20px;
-        min-width: 450px;
+        min-width: 400px;
         display: flex;
         flex-direction: column;
        label{
@@ -21,7 +23,7 @@
         border:none;
         }
         &-loginButton{
-            width: 100%;
+            // width: 100%;
             margin-left: 0;
             margin-top: 20px; 
             cursor: pointer;
@@ -43,16 +45,20 @@
         font-size: 50px;
     }
    
-    .registerButton{
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        border:none;
-        border-radius: 5px;
-        padding: 20px;
-        margin-top: 20px; 
-        
-        cursor: pointer;
-    }
+  
    
+}
+
+@include mobile {
+    .loginDiv{
+        margin-right: 5px;
+        .loginForm{
+        padding-left: 10px;
+        padding-right: 10px;
+        &-loginButton{
+           margin: 10px;
+            //width: 95%;
+        }
+        }
+    }
 }

@@ -39,9 +39,7 @@ export default function Login() {
                     />
                 <button className="loginForm-loginButton" type="submit" disabled={isFetching}>Login</button>
             </form>
-            {/* <button className="registerButton">
-                <Link to="/register" style={{ textDecoration: "none", color:" black" }}>Register</Link>
-            </button> */}
+           
         </div>
     )
 }

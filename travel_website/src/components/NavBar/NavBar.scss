@@ -8,7 +8,7 @@
   justify-content: flex-start;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   background: white;
-  height: 80px;
+  height: 70px;
 
   
 
@@ -62,7 +62,8 @@ a{
 @include mobile{
   
   .navBar{
-    position: relative
+    position: relative;
+    height: 60px;
     
 
     &-logo {
@@ -74,11 +75,10 @@ a{
       position: absolute;
       top: 0;
       right: 0;
-      transform: translate(-100%, 40%);
+      transform: translate(-100%, 25%);
       color: $Dark-purple;
       cursor: pointer;
       font-size: 1.8rem;
-
     }
 
 
@@ -88,7 +88,7 @@ a{
       width: 100%;
       height: 350px;
       position: absolute;
-      top: 67px;
+      top: 45px;
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
