@@ -27,29 +27,30 @@ export default function NavBar() {
             MenuItems.map((item, index) => {
               return(
                 <li key={index}>
-                  <Link className={item.cName} to={item.url}>{item.title}</Link>
+                  <Link className={item.cName} to={item.url} onClick={handleClicked}>{item.title}</Link>
                 </li>
               )
               
             })
           }     
         
-          { user ? (
+          { user && 
           <>
             {user.admin &&
             <li>
-                <Link className="navBar-menu-links nav-item" to="/publish">PUBLISH</Link>
+                <Link className="navBar-menu-links nav-item" to="/publish" onClick={handleClicked}>PUBLISH</Link>
             </li>
             }
             <li  onClick={handleLogOut}>
-              <Link className="navBar-menu-links nav-item" to="/">{user && "LOGOUT"}</Link>        
+              <Link className="navBar-menu-links nav-item" to="/" onClick={handleClicked}>{user && "LOGOUT"}</Link>        
             </li>
             </>
-            ) : (
-            <li>
-                <Link className="navBar-menu-links nav-item" to="/">{user && "LOGOUT"}</Link> 
-            </li>
-            )}
+            // ) : (
+            // <li>
+            //     <Link className="navBar-menu-links nav-item" to="/">{user && "LOGOUT"}</Link> 
+            // </li>
+            // )
+          }
           </ul>
       
         

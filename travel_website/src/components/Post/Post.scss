@@ -82,18 +82,17 @@
                 margin: 0;
                 width: 320px;
             }
-        
+        }
+
+        .updateList{
+            margin: 0;
+            .card{
+                display: flex;
+                max-width: 400px;
+            }
         }
     }
-
-    .updateList{
-        margin: 0;
-        .card-columns{
-            column-count: 1;
-            max-width: 450px;
-        }
-    }
-
+    
 }
 
 

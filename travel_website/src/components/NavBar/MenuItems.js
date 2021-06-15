@@ -16,7 +16,7 @@ export const MenuItems = [
     },
     {
         title: 'ABOUT',
-        url: '/blog',
+        url: '/about',
         cName: 'navBar-menu-links'
     },
     

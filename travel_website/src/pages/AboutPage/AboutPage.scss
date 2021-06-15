@@ -1,6 +1,6 @@
 @import "../../scss/colors.scss";
 @import "../../scss//mediaQueries.scss";
-.AboutMain{
+.aboutMain{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -16,5 +16,13 @@
     &-pictures{
         padding: 10px;
         overflow: hidden;
+    }
+}
+@include mobile {
+    .aboutMain{
+    margin: 0;
+    &-description{
+        margin: 5px;
+    }
     }
 }
