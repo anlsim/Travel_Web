@@ -8,26 +8,26 @@ export default function Register() {
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
 
-    const handleRegister = async (e) => {
-        e.preventDefault();
-        setError(false);
-        try {
-          const res = await axios.post("/auth/register", {
-            fullName,
-            email,
-            password,
-          });
-          res.data && window.location.replace("/login");
-        } catch (err) {
-          setError(true);
-        }
-      };
+    // const handleRegister = async (e) => {
+    //     e.preventDefault();
+    //     setError(false);
+    //     try {
+    //       const res = await axios.post("/auth/register", {
+    //         fullName,
+    //         email,
+    //         password,
+    //       });
+    //       res.data && window.location.replace("/login");
+    //     } catch (err) {
+    //       setError(true);
+    //     }
+    //   };
     
 
     return (
         <div className="registerDiv">
-        <span className="registerTitle">Register</span>
-        <form className="registerForm" onSubmit={handleRegister}>
+        <span className="registerTitle">Request Access</span>
+        <form className="registerForm" action= "mailto:anlsimental@gmail.com">
 
             <input 
                 className="registerForm-input" 
@@ -43,19 +43,14 @@ export default function Register() {
                 required
                 onChange={e=>setEmail(e.target.value)}
             />
-            <input 
+            {/* <input 
                 className="registerForm-input" 
                 type="password"
                 placeholder="Password"
                 required
                 onChange={e=>setPassword(e.target.value)}
-            />
-            {/* <input 
-                className="registerInput" 
-                type="password" 
-                placeholder="Confirm Password"
             /> */}
-            <button className="registerForm-button" type="submit">register</button>
+            <button className="registerForm-button" type="submit">Send Request</button>
         </form>
         {/* <button className="loginButton">
             <Link to="/login" style={{ textDecoration: "none", color:" black" }}>Login</Link>
