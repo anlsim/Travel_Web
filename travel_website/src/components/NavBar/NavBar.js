@@ -40,9 +40,17 @@ export default function NavBar() {
                 <Link className="navBar-menu-links nav-item" to="/publish" onClick={handleClicked}>PUBLISH</Link>
             </li>
             }
+            <div className="navBar-settings">
+            <li>
+                  <Link  to="/settings" onClick={handleClicked}> <i className="far fa-user-circle"></i></Link>
+            </li>
             <li  onClick={handleLogOut}>
               <Link className="navBar-menu-links nav-item" to="/" onClick={handleClicked}>{user && "LOGOUT"}</Link>        
             </li>
+           
+
+           
+            </div>
           </>
             
           }

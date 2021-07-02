@@ -42,6 +42,11 @@
     
     }
   }
+  &-settings{
+    margin-left: 800px;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+  }
   
 }
 

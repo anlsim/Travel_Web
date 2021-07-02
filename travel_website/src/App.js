@@ -15,6 +15,7 @@ import MapPage from './pages/MapPage/MapPage';
 import Login from './pages/LoginPage/Login';
 import Register from './pages/RegisterPage/Register';
 import Publish from './pages/PublishPage/PublishPage';
+import UserSettings from './pages/UserSettingsPage/UserSettings'
 
 import {Context } from "./context/Contex";
 
@@ -36,6 +37,7 @@ function App () {
                 <Route path="/register" component={user ? HomePage : Register} />
                 <Route path="/map" component={user ? MapPage : Login} />
                 <Route path="/publish" component={user ? Publish : Login} />
+                <Route path="/settings" component={user ? UserSettings : Login} />
                 <Route component={NotFoundPage} />
             </Switch>
         

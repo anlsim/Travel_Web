@@ -11,13 +11,16 @@ const Post = ({ match }) => {
     const[loading, setloading] = useState(true);
     const[posts, setPosts] = useState([]);
     const[comments, setComments] = useState([]);
+  
     useEffect(()=>{
+      
         const fetchPost = async ()=> {
             const res = await axios.get("/posts");
             setPosts(res.data);
             setloading(false);
         }
         fetchPost();
+        
     }, []);
 
     useEffect(()=>{
@@ -25,7 +28,9 @@ const Post = ({ match }) => {
             const res = await axios.get("/comments");
             setComments(res.data);
         }
+       
         fetchComments();
+        
     }, []);
     if(loading) return <h4>Loading post...</h4>
     const updateId = match.params.updateId;
@@ -36,9 +41,10 @@ const Post = ({ match }) => {
     console.log(filterComments)
     if (!update) return <NotFoundPage />
     const otherUpdates = posts.filter(update => update._id !== updateId);
-
+    
     return (
         <>
+        
         <div className="row postContainer">
             <div className="col-8 postDiv">
                 <h1>{update.title}</h1>
