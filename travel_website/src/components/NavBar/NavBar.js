@@ -29,8 +29,7 @@ export default function NavBar() {
                 <li key={index}>
                   <Link className={item.cName} to={item.url} onClick={handleClicked}>{item.title}</Link>
                 </li>
-              )
-              
+              )  
             })
           }     
         

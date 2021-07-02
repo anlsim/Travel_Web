@@ -1,61 +1,56 @@
 import {useState} from 'react';
-import axios from "axios";
+import * as emailjs from 'emailjs-com';
 import './Register.scss';
 
 export default function Register() {
-    // const [fullName, setFullName] = useState("");
-    // const [email, setEmail] = useState("");
-    // const [password, setPassword] = useState("");
-    const [error, setError] = useState(false);
 
-    // const handleRegister = async (e) => {
-    //     e.preventDefault();
-    //     setError(false);
-    //     try {
-    //       const res = await axios.post("/auth/register", {
-    //         fullName,
-    //         email,
-    //         password,
-    //       });
-    //       res.data && window.location.replace("/login");
-    //     } catch (err) {
-    //       setError(true);
-    //     }
-    //   };
+    const [error, setError] = useState(false);
+    const [result, setResult] = useState(false);
+
+    const handleRegister = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('gmail', 'template_u8iqxdv', e.target, 'user_w23wcjoGEbLPGHn1FfQmh')
+        .then((result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
+        e.target.reset();
+        setResult(true);
+
+      };
     
 
     return (
         <div className="registerDiv">
+        { result &&
+        <h4>Thanks for requesting access, we will send you your login information soon!</h4> }
         <span className="registerTitle">Request Access</span>
-        <form className="registerForm" action= "mailto:anlsimental@gmail.com">
+        <form className="registerForm" onSubmit={handleRegister}>
 
             <input 
                 className="registerForm-input" 
                 type="text" 
                 placeholder="Full Name"
+                name="full_name"
                 required
-                // onChange={e=>setFullName(e.target.value)}
+                
             />
             <input 
                 className="registerForm-input" 
                 type="text" 
                 placeholder="Email Address"
+                name="user_email"
                 required
-                // onChange={e=>setEmail(e.target.value)}
+                
             />
-            {/* <input 
-                className="registerForm-input" 
-                type="password"
-                placeholder="Password"
-                required
-                onChange={e=>setPassword(e.target.value)}
-            /> */}
+            
             <button className="registerForm-button" type="submit">Send Request</button>
         </form>
-        {/* <button className="loginButton">
-            <Link to="/login" style={{ textDecoration: "none", color:" black" }}>Login</Link>
-        </button> */}
+        
         {error && <span>Something went wrong!</span> }
+       
+        
     </div>
     )
 }
