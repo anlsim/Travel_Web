@@ -44,12 +44,8 @@ export default function NavBar() {
             <li  onClick={handleLogOut}>
               <Link className="navBar-menu-links nav-item" to="/" onClick={handleClicked}>{user && "LOGOUT"}</Link>        
             </li>
-            </>
-            // ) : (
-            // <li>
-            //     <Link className="navBar-menu-links nav-item" to="/">{user && "LOGOUT"}</Link> 
-            // </li>
-            // )
+          </>
+            
           }
           </ul>
       

@@ -3,9 +3,9 @@ import axios from "axios";
 import './Register.scss';
 
 export default function Register() {
-    const [fullName, setFullName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    // const [fullName, setFullName] = useState("");
+    // const [email, setEmail] = useState("");
+    // const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
 
     // const handleRegister = async (e) => {
@@ -34,14 +34,14 @@ export default function Register() {
                 type="text" 
                 placeholder="Full Name"
                 required
-                onChange={e=>setFullName(e.target.value)}
+                // onChange={e=>setFullName(e.target.value)}
             />
             <input 
                 className="registerForm-input" 
                 type="text" 
                 placeholder="Email Address"
                 required
-                onChange={e=>setEmail(e.target.value)}
+                // onChange={e=>setEmail(e.target.value)}
             />
             {/* <input 
                 className="registerForm-input" 

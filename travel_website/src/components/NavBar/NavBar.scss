@@ -2,6 +2,7 @@
 @import "../../scss/mediaQueries.scss";
 
 .navBar{
+
   display: flex;
   align-items: center;
   font-size: 1.2rem;
@@ -9,8 +10,6 @@
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   background: white;
   height: 70px;
-
-  
 
   &-logo {
     justify-self: start;
@@ -27,7 +26,7 @@
 
   &-menu{
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(6, auto);
     grid-gap: 20px;
     // display: flex;
     cursor: pointer;
