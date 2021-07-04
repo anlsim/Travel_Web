@@ -23,7 +23,6 @@
         border:none;
         }
         &-loginButton{
-            // width: 100%;
             margin-left: 0;
             margin-top: 20px; 
             cursor: pointer;
@@ -55,9 +54,9 @@
         .loginForm{
         padding-left: 10px;
         padding-right: 10px;
+        
         &-loginButton{
            margin: 10px;
-            //width: 95%;
         }
         }
     }

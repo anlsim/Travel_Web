@@ -1,12 +1,16 @@
-import React from 'react';
+import { useContext, useState } from "react";
 import './UserSettings.scss';
+import Hero from '../../components/Hero/Hero';
 
 export default function UserSettings() {
+
     return (
+        <>
+        <Hero title={'ACCOUNT SETTINGS'}/>
         <div className="settings">
         <div className="settingsWrapper">
           <div className="settingsTitle">
-            <span className="settingsTitleUpdate">Update Your Password</span>
+            <h3>Update Your Password</h3>
           </div>
           <form className="settingsForm">
         
@@ -19,5 +23,6 @@ export default function UserSettings() {
         </div>
         
       </div>
+      </>
     )
 }
