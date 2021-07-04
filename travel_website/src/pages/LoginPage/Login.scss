@@ -1,63 +1,22 @@
 @import '../../scss/colors.scss';
 @import '../../scss/mediaQueries.scss';
+@import '../../scss/mixins.scss';
 
 .loginDiv{
-    height: calc(100vh - 50px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .loginForm{
-        margin-top: 20px;
-        min-width: 400px;
-        display: flex;
-        flex-direction: column;
-       label{
-          margin: 10px 0; 
-       }
-       &-loginInput{
-        margin: 10px;
-        padding: 10px;
-        background-color: $Floral-white;
-        border:none;
-        }
-        &-loginButton{
-            margin-left: 0;
-            margin-top: 20px; 
-            cursor: pointer;
-            background-color: $Blue-green;
-            border:none;
-            color: $Floral-white;
-            border-radius: 5px;
-            padding: 10px;
-         }
-         &-loginButton:disabled{
-             cursor:not-allowed;
-         }
-
-       
-    }
-   
-
-    .loginTitle{
-        font-size: 50px;
-    }
-   
-  
+    @include mainFormDiv;
    
 }
 
 @include mobile {
     .loginDiv{
         margin-right: 5px;
-        .loginForm{
-        padding-left: 10px;
-        padding-right: 10px;
+        .mainForm{
+            padding-left: 10px;
+            padding-right: 10px;
         
-        &-loginButton{
-           margin: 10px;
-        }
+            &-button{
+            margin: 10px;
+            }
         }
     }
 }

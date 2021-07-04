@@ -25,11 +25,11 @@ export default function Register() {
         <div className="registerDiv">
         { result &&
         <h4>Thanks for requesting access, we will send you your login information soon!</h4> }
-        <span className="registerTitle">Request Access</span>
-        <form className="registerForm" onSubmit={handleRegister}>
+        <span className="formTitle">Request Access</span>
+        <form className="mainForm" onSubmit={handleRegister}>
 
             <input 
-                className="registerForm-input" 
+                className="mainForm-input" 
                 type="text" 
                 placeholder="Full Name"
                 name="full_name"
@@ -37,7 +37,7 @@ export default function Register() {
                 
             />
             <input 
-                className="registerForm-input" 
+                className="mainForm-input" 
                 type="text" 
                 placeholder="Email Address"
                 name="user_email"
@@ -45,7 +45,7 @@ export default function Register() {
                 
             />
             
-            <button className="registerForm-button" type="submit">Send Request</button>
+            <button className="mainForm-button" type="submit">Send Request</button>
         </form>
         
         {error && <span>Something went wrong!</span> }

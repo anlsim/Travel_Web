@@ -23,21 +23,21 @@ export default function Login() {
   };
     return (
         <div className="loginDiv">
-            <span className="loginTitle">Login</span>
-            <form className="loginForm" onSubmit={handleLogin}>
+            <span className="formTitle">Login</span>
+            <form className="mainForm" onSubmit={handleLogin}>
                 <input 
-                    className="loginForm-loginInput" 
+                    className="mainForm-input" 
                     type="email" 
                     placeholder="Enter your email..."
                     ref={emailRef}
                 />
                 <input 
-                    className="loginForm-loginInput" 
+                    className="mainForm-input" 
                     type="password" 
                     placeholder="Enter your password..."
                     ref={passwordRef}
                     />
-                <button className="loginForm-loginButton" type="submit" disabled={isFetching}>Login</button>
+                <button className="mainForm-button" type="submit" disabled={isFetching}>Login</button>
             </form>
            
         </div>

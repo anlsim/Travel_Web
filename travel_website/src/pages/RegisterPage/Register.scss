@@ -1,54 +1,7 @@
 @import '../../scss/colors.scss';
+@import '../../scss/mixins.scss';
+
 .registerDiv{
-    height: calc(100vh - 50px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include mainFormDiv;
 
-    .registerForm{
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        min-width: 400px;
-       label{
-          margin: 10px 0; 
-       }
-
-       &-input{
-            margin: 10px;
-            padding: 10px;
-            background-color: $Floral-white;
-            border:none;
-        }
-
-        &-button{
-            margin-left:0;
-           margin-top: 20px; 
-           cursor: pointer;
-           background-color: $Blue-green;
-           border:none;
-           color: $Floral-white;
-           border-radius: 5px;
-           padding: 10px;
-        }
-
-       
-    }
-    
-    .registerTitle{
-        font-size: 50px;
-    }
-    
-    .loginButton{
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        border:none;
-        border-radius: 5px;
-        padding: 20px;
-        margin-top: 20px; 
-        
-        cursor: pointer;
-    }
 }
