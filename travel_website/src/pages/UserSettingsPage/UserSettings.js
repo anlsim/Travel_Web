@@ -5,24 +5,19 @@ import Hero from '../../components/Hero/Hero';
 export default function UserSettings() {
 
     return (
-        <>
+      <>
         <Hero title={'ACCOUNT SETTINGS'}/>
         <div className="settings">
-        <div className="settingsWrapper">
-          <div className="settingsTitle">
-            <h3>Update Your Password</h3>
-          </div>
-          <form className="settingsForm">
-        
-            <label>Password</label>
-            <input type="password" placeholder="Password" name="password" />
-            <button className="settingsSubmitButton" type="submit">
-              Update
+     
+          
+          <form className="settings-form">
+            <h4>Update Your Password</h4>
+            <input className="settings-form-input" type="password" placeholder="New Password" name="password" />
+            <button className="settings-form-button" type="submit">
+              Update Password
             </button>
           </form>
         </div>
-        
-      </div>
       </>
     )
 }

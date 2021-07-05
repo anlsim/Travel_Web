@@ -34,15 +34,14 @@ export default function Register() {
                 placeholder="Full Name"
                 name="full_name"
                 required
-                
             />
+
             <input 
                 className="mainForm-input" 
                 type="text" 
                 placeholder="Email Address"
                 name="user_email"
                 required
-                
             />
             
             <button className="mainForm-button" type="submit">Send Request</button>
