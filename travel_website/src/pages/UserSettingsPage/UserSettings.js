@@ -8,8 +8,6 @@ export default function UserSettings() {
       <>
         <Hero title={'ACCOUNT SETTINGS'}/>
         <div className="settings">
-     
-          
           <form className="settings-form">
             <h4>Update Your Password</h4>
             <input className="settings-form-input" type="password" placeholder="New Password" name="password" />
